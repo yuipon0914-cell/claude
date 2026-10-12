@@ -10,6 +10,8 @@
 - `index.html` をブラウザで直接開く、または
 - 静的サーバーで配信する：`npx http-server .` → 表示された URL を開く
 
+公開版：https://claude.ai/artifact/CXTm2zXfgBoVwZMurt69CB （`node scripts/build-artifact.js` で `dist/hackerlab.html` を生成して公開。公開版では動画は埋め込まず「YouTubeで開く」リンクのみ）
+
 進捗はブラウザの `localStorage`（キー `hackerlab.progress`）に保存されます。
 
 ## 機能

@@ -150,6 +150,7 @@ const assert = (c, m) => { if (!c) throw new Error(m || "assertion failed"); };
   await step("やり直し：作業は消え、解決記録は残る", async () => {
     await go(page, "#/case/case01/report");
     await page.click('button[data-action="reset-case"]');
+    await page.click('button[data-action="reset-case"][data-confirmed="1"]');
     await page.waitForFunction(() => location.hash.includes("brief"));
     await go(page, "#/case/case01/board");
     eq(await page.locator(".pin").count(), 0);

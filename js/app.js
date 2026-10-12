@@ -415,7 +415,9 @@
       </div>
       <div class="row">
         <button class="btn primary" data-action="run-tests">▶ テストを実行</button>
-        <button class="btn" data-action="reset-code">最初のコードに戻す</button>
+        ${ui.confirm === "reset-code:" + c.id
+          ? `<span class="small">コードを最初の状態に戻しますか？</span><button class="btn danger" data-action="reset-code" data-confirmed="1">戻す</button><button class="btn" data-action="cancel-confirm">やめる</button>`
+          : `<button class="btn" data-action="reset-code">最初のコードに戻す</button>`}
       </div>
       <p class="small muted">演習環境：使えるのは const / let / if / else / return / === / !== / && / || / ! / 比較 / console.log などの限られた文法です。コードはブラウザ内の制限付きインタプリタで判定し、外部と通信しません。これは考え方を学ぶための簡略化した判定で、実際の仕組みはこの数行だけでは完成しません。</p>
       <div id="test-out" aria-live="polite">${t ? testTable(t) : ""}</div>
@@ -531,7 +533,9 @@
         ${!ev.allOk ? `<p class="small muted">すべての解決条件がそろうと申請できます。</p>` : ""}
         ${cm ? `<p class="banner ${cm.kind}" aria-live="polite">${cm.html}</p>` : ""}
         <hr>
-        <button class="btn danger sm" data-action="reset-case">この事件をやり直す</button>
+        ${ui.confirm === "reset-case:" + c.id
+          ? `<p class="small">作業内容を消して最初から調査し直しますか？（正式な解決記録は残ります）</p><div class="row"><button class="btn danger sm" data-action="reset-case" data-confirmed="1">消してやり直す</button><button class="btn sm" data-action="cancel-confirm">やめる</button></div>`
+          : `<button class="btn danger sm" data-action="reset-case">この事件をやり直す</button>`}
         <p class="small muted">作業内容（証拠・講義の回答・コード・対応・レポート）を消して最初から調査します。正式な解決記録とレベルの解放は残ります。</p>
       </div>`;
   }
@@ -564,7 +568,7 @@
     return `
       <section class="page-head"><p class="eyebrow">VIDEO LECTURES</p><h1>動画で学ぶ</h1>
         <p class="muted">YouTubeで公開されているプログラミング・セキュリティの講義です。事件ファイルとは独立していて、見なくても事件は進められます。</p>
-        <p class="small muted">掲載基準：${esc(HL.VIDEOS_VERIFIED_ON)} にURL（動画ID）とタイトルの組を検索インデックスで確認できた動画だけを載せています。投稿者名は確認できたものだけ表示しています。埋め込みが再生できない場合は「YouTubeで開く」を使ってください。</p></section>
+        <p class="small muted">掲載基準：${esc(HL.VIDEOS_VERIFIED_ON)} にURL（動画ID）とタイトルの組を検索インデックスで確認できた動画だけを載せています。投稿者名は確認できたものだけ表示しています。${HL.EMBED_DISABLED ? "この公開版ではページ内に動画を埋め込めないため、「YouTubeで開く」から視聴してください。" : "埋め込みが再生できない場合は「YouTubeで開く」を使ってください。"}</p></section>
       <div class="filters panel">
         <label class="field grow"><span>検索</span><input type="search" id="video-q" value="${esc(f.q)}" placeholder="例：2FA、CSRF、JavaScript" autocomplete="off"></label>
         <label class="field"><span>分類</span><select id="video-cat"><option value="all">すべて</option>${HL.VIDEO_CATEGORIES.map((c) => `<option value="${c.id}" ${f.cat === c.id ? "selected" : ""}>${esc(c.label)}</option>`).join("")}</select></label>
@@ -582,7 +586,7 @@
       const cat = HL.VIDEO_CATEGORIES.find((c) => c.id === v.category);
       return `
       <article class="panel video">
-        <div class="player">${ui.playing === v.id ? `<iframe src="${esc(HL.videoEmbedUrl(v.id))}" title="${esc(v.title)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>` : `<button class="play" data-action="play" data-id="${esc(v.id)}" aria-label="${esc(v.title)} をここで再生"><span>▶ ここで再生</span></button>`}</div>
+        ${HL.EMBED_DISABLED ? "" : `<div class="player">${ui.playing === v.id ? `<iframe src="${esc(HL.videoEmbedUrl(v.id))}" title="${esc(v.title)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>` : `<button class="play" data-action="play" data-id="${esc(v.id)}" aria-label="${esc(v.title)} をここで再生"><span>▶ ここで再生</span></button>`}</div>`}
         <div class="tags"><span class="tag">${esc(cat.label)}</span><span class="tag">${v.lang === "ja" ? "日本語" : "英語"}</span><span class="tag">${esc(v.level)}</span>${watched ? `<span class="tag ok">視聴済み</span>` : ""}</div>
         <h3>${esc(v.title)}</h3>
         <p class="small muted">${v.channel ? "投稿元：" + esc(v.channel) : "投稿元：YouTubeのページで確認してください"}</p>
@@ -631,6 +635,7 @@
     const cs = c ? P.caseState(state, c.id) : null;
     switch (act) {
       case "skip": $("#app").focus(); return;
+      case "cancel-confirm": ui.confirm = null; rerenderKeepScroll(); return;
       case "nova-toggle": ui.novaOpen = !ui.novaOpen; rerenderKeepScroll(); return;
       case "nova": {
         ui.nova[c.id] = HL.Nova.respond(el.dataset.kind, c, cs, P.evaluate(c, cs), ui.lastTest[c.id]);
@@ -658,7 +663,8 @@
       }
       case "run-tests": runCaseTests(c); rerenderKeepScroll(); return;
       case "reset-code":
-        if (!confirm("コードを最初の状態に戻しますか？")) return;
+        if (!el.dataset.confirmed) { ui.confirm = "reset-code:" + c.id; rerenderKeepScroll(); return; }
+        ui.confirm = null;
         cs.code = null; cs.codeResult = null; delete ui.lastTest[c.id]; persist(); rerenderKeepScroll(); return;
       case "act": {
         const a = c.responseActions.find((x) => x.id === el.dataset.id);
@@ -684,7 +690,8 @@
         persist(); rerenderKeepScroll(); return;
       }
       case "reset-case":
-        if (!confirm(`「${c.title}」の作業内容を消して、最初から調査し直しますか？（正式な解決記録は残ります）`)) return;
+        if (!el.dataset.confirmed) { ui.confirm = "reset-case:" + c.id; rerenderKeepScroll(); return; }
+        ui.confirm = null;
         P.resetCase(state, c.id);
         for (const k of ["lastTest", "nova", "causeMsg", "actionMsg", "certifyMsg"]) delete ui[k][c.id];
         persist(); location.hash = `#/case/${c.id}/brief`; rerenderKeepScroll(); return;
@@ -774,6 +781,6 @@
   window.addEventListener("resize", setHeaderHeight);
   setHeaderHeight();
 
-  window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+  window.addEventListener("hashchange", () => { ui.confirm = null; render(); window.scrollTo(0, 0); });
   render();
 })();
