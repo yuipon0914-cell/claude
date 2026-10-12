@@ -177,10 +177,10 @@ const assert = (c, m) => { if (!c) throw new Error(m || "assertion failed"); };
   });
   await step("動画・基礎実践・単語検索", async () => {
     await go(page, "#/videos");
-    assert(await page.locator(".video").count() >= 10);
-    assert(await page.locator('.video a[href^="https://www.youtube.com/watch?v="]').count() >= 10, "YouTubeで開くリンク");
-    await page.selectOption("#video-lang", "ja");
-    assert((await page.locator(".video").count()) >= 2);
+    assert(await page.locator(".video").count() >= 8, "日本語の動画が初期表示");
+    assert(await page.locator(".video .reputation").count() === await page.locator(".video").count(), "評判の根拠");
+    await page.selectOption("#video-lang", "all");
+    assert(await page.locator('.video a[href^="https://www.youtube.com/watch?v="]').count() >= 15, "YouTubeで開くリンク");
     await page.click(".video .play");
     eq(await page.locator(".player iframe").count(), 1);
     await shot(page, "08-videos");

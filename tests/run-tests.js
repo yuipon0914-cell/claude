@@ -337,7 +337,9 @@ test("動画：IDの形式・重複なし・検証日あり・関連事件が存
   assert(HL.VIDEOS.length >= 10);
   eq(new Set(HL.VIDEOS.map((v) => v.id)).size, HL.VIDEOS.length);
   for (const v of HL.VIDEOS) {
-    assert(/^[A-Za-z0-9_-]{11}$/.test(v.id), `IDの形式 ${v.id}`);
+    if (v.kind === "channel") assert(/^https:\/\/www\.youtube\.com\/@[\w-]+$/.test(v.url), `チャンネルURL ${v.id}`);
+    else assert(/^[A-Za-z0-9_-]{11}$/.test(v.id), `IDの形式 ${v.id}`);
+    if (v.lang === "ja") assert(v.reputation, `日本語動画 ${v.id} に評判の根拠がない`);
     assert(HL.VIDEO_CATEGORIES.some((c) => c.id === v.category), `分類 ${v.id}`);
     v.cases.forEach((id) => assert(HL.getCase(id), `関連事件 ${id}`));
   }

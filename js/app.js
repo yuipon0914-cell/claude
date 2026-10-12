@@ -14,7 +14,7 @@
   const persist = () => P.save(storage, state);
 
   // 画面だけの一時的な状態（保存しない）
-  const ui = { lastTest: {}, nova: {}, causeMsg: {}, actionMsg: {}, certifyMsg: {}, openEvidence: {}, playing: null, basicsResult: {}, videoFilter: { q: "", cat: "all", lang: "all" }, glossaryQ: "", novaOpen: false };
+  const ui = { lastTest: {}, nova: {}, causeMsg: {}, actionMsg: {}, certifyMsg: {}, openEvidence: {}, playing: null, basicsResult: {}, videoFilter: { q: "", cat: "all", lang: "ja" }, glossaryQ: "", novaOpen: false };
 
   // ---------- 小道具 ----------
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -323,7 +323,7 @@
   function relatedVideos(c) {
     const vs = HL.VIDEOS.filter((v) => v.cases.includes(c.id));
     if (!vs.length) return "";
-    return `<p class="small muted">関連する動画（任意）：${vs.map((v) => `<a href="${esc(HL.videoUrl(v.id))}" target="_blank" rel="noopener">${esc(v.title)}</a>`).join(" / ")}</p>`;
+    return `<p class="small muted">関連する動画（任意）：${vs.map((v) => `<a href="${esc(HL.videoUrl(v))}" target="_blank" rel="noopener">${esc(v.title)}</a>`).join(" / ")}</p>`;
   }
 
   // --- 資料調査
@@ -568,7 +568,7 @@
     return `
       <section class="page-head"><p class="eyebrow">VIDEO LECTURES</p><h1>動画で学ぶ</h1>
         <p class="muted">YouTubeで公開されているプログラミング・セキュリティの講義です。事件ファイルとは独立していて、見なくても事件は進められます。</p>
-        <p class="small muted">掲載基準：${esc(HL.VIDEOS_VERIFIED_ON)} にURL（動画ID）とタイトルの組を検索インデックスで確認できた動画だけを載せています。投稿者名は確認できたものだけ表示しています。${HL.EMBED_DISABLED ? "この公開版ではページ内に動画を埋め込めないため、「YouTubeで開く」から視聴してください。" : "埋め込みが再生できない場合は「YouTubeで開く」を使ってください。"}</p></section>
+        <p class="small muted">掲載基準：${esc(HL.VIDEOS_VERIFIED_ON)} にURL（動画ID）とタイトルの組を検索インデックスで確認できた動画だけを載せています。日本語の動画は、初心者にわかりやすいという評判（紹介記事・公的機関・著名な専門家）を確認できたものに絞り、根拠を各動画に表示しています。投稿者名は確認できたものだけ表示しています。最初は日本語の動画を表示しています（「言語」で英語の定番講座も選べます）。${HL.EMBED_DISABLED ? "この公開版ではページ内に動画を埋め込めないため、「YouTubeで開く」から視聴してください。" : "埋め込みが再生できない場合は「YouTubeで開く」を使ってください。"}</p></section>
       <div class="filters panel">
         <label class="field grow"><span>検索</span><input type="search" id="video-q" value="${esc(f.q)}" placeholder="例：2FA、CSRF、JavaScript" autocomplete="off"></label>
         <label class="field"><span>分類</span><select id="video-cat"><option value="all">すべて</option>${HL.VIDEO_CATEGORIES.map((c) => `<option value="${c.id}" ${f.cat === c.id ? "selected" : ""}>${esc(c.label)}</option>`).join("")}</select></label>
@@ -586,13 +586,14 @@
       const cat = HL.VIDEO_CATEGORIES.find((c) => c.id === v.category);
       return `
       <article class="panel video">
-        ${HL.EMBED_DISABLED ? "" : `<div class="player">${ui.playing === v.id ? `<iframe src="${esc(HL.videoEmbedUrl(v.id))}" title="${esc(v.title)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>` : `<button class="play" data-action="play" data-id="${esc(v.id)}" aria-label="${esc(v.title)} をここで再生"><span>▶ ここで再生</span></button>`}</div>`}
+        ${HL.EMBED_DISABLED || v.kind === "channel" ? "" : `<div class="player">${ui.playing === v.id ? `<iframe src="${esc(HL.videoEmbedUrl(v.id))}" title="${esc(v.title)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>` : `<button class="play" data-action="play" data-id="${esc(v.id)}" aria-label="${esc(v.title)} をここで再生"><span>▶ ここで再生</span></button>`}</div>`}
         <div class="tags"><span class="tag">${esc(cat.label)}</span><span class="tag">${v.lang === "ja" ? "日本語" : "英語"}</span><span class="tag">${esc(v.level)}</span>${watched ? `<span class="tag ok">視聴済み</span>` : ""}</div>
         <h3>${esc(v.title)}</h3>
-        <p class="small muted">${v.channel ? "投稿元：" + esc(v.channel) : "投稿元：YouTubeのページで確認してください"}</p>
+        <p class="small muted">${v.kind === "channel" ? "YouTubeチャンネル" : v.channel ? "投稿元：" + esc(v.channel) : "投稿元：YouTubeのページで確認してください"}</p>
+        ${v.reputation ? `<p class="small reputation"><span class="ok-text">評判</span> ${esc(v.reputation)}</p>` : ""}
         <p class="small">${esc(v.description)}</p>
         ${v.cases.length ? `<p class="small">関連する事件：${v.cases.map((id) => { const c = HL.getCase(id); return `<a href="#/case/${id}/lecture">LEVEL ${pad2(c.level)} ${esc(c.title)}</a>`; }).join("、")}</p>` : ""}
-        <div class="row"><a class="btn sm" href="${esc(HL.videoUrl(v.id))}" target="_blank" rel="noopener">YouTubeで開く ↗</a><button class="btn sm" data-action="watched" data-id="${esc(v.id)}">${watched ? "視聴済みを外す" : "視聴済みにする"}</button></div>
+        <div class="row"><a class="btn sm" href="${esc(HL.videoUrl(v))}" target="_blank" rel="noopener">${v.kind === "channel" ? "チャンネルを開く ↗" : "YouTubeで開く ↗"}</a><button class="btn sm" data-action="watched" data-id="${esc(v.id)}">${watched ? "視聴済みを外す" : "視聴済みにする"}</button></div>
       </article>`;
     }).join("") : `<p class="empty">条件に合う動画はありません。</p>`;
   }
