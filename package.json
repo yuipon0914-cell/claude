@@ -1,0 +1,11 @@
+{
+  "name": "hacker-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "架空のサイバー事件を解決しながらセキュリティを学ぶ初心者向け学習アプリ",
+  "scripts": {
+    "start": "npx http-server . -c-1",
+    "test": "node tests/run-tests.js",
+    "test:e2e": "node tests/e2e.js"
+  }
+}

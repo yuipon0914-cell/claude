@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HACKER LAB</title>
+  <meta name="description" content="架空のサイバー事件を解決しながら、自分や他人を守るセキュリティの知識を身につける初心者向け学習アプリ">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111814'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%23c6f07c'%3EH%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button class="skip" data-action="skip">本文へ移動</button>
+  <header class="topbar">
+    <a class="logo" href="#/"><span class="logo-mark">&gt;_</span> HACKER LAB</a>
+    <nav class="topnav" aria-label="メイン">
+      <a href="#/" data-page="home">ホーム</a>
+      <a href="#/cases" data-page="cases">事件ファイル</a>
+      <a href="#/basics" data-page="basics">基礎実践</a>
+      <a href="#/videos" data-page="videos">動画で学ぶ</a>
+      <a href="#/glossary" data-page="glossary">単語検索</a>
+    </nav>
+  </header>
+  <div id="app" class="wrap" tabindex="-1"><noscript>このアプリを使うには JavaScript を有効にしてください。</noscript></div>
+  <footer class="foot">
+    <p>HACKER LAB — 登場する組織・人物・URL・口座はすべて架空です。学んだ知識は、自分や周りの人を守るために使ってください。</p>
+  </footer>
+
+  <!-- エンジン（判定ロジック） -->
+  <script src="js/engine/minijs.js"></script>
+  <!-- データ（事件・講義・動画・辞典） -->
+  <script src="js/data/registry.js"></script>
+  <script src="js/data/cases/ch1.js"></script>
+  <script src="js/data/cases/ch2.js"></script>
+  <script src="js/data/cases/ch3.js"></script>
+  <script src="js/data/cases/ch4.js"></script>
+  <script src="js/data/cases/ch5.js"></script>
+  <script src="js/data/cases/ch6.js"></script>
+  <script src="js/data/videos.js"></script>
+  <script src="js/data/glossary.js"></script>
+  <script src="js/data/basics.js"></script>
+  <script src="js/engine/progress.js"></script>
+  <script src="js/engine/nova.js"></script>
+  <!-- 画面 -->
+  <script src="js/app.js"></script>
+</body>
+</html>
