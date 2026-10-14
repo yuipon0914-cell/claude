@@ -1,0 +1,12 @@
+{
+  "name": "pokke-ehon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "お金と投資の考え方を学ぶ絵本シリーズ「ポッケ」の原稿と入稿ファイル作成",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "validate": "node bin/validate.js",
+    "prompts": "node bin/prompts.js",
+    "build": "node bin/build.js"
+  }
+}
