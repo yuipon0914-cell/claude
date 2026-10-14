@@ -101,7 +101,7 @@ test("原稿：shot が不正ならエラー", () => {
 
 // ---- 追加のテストはここから下（後の作業で増やす） ----
 const extra = path.join(__dirname, "extra");
-for (const f of ["prompts.js", "layout.js", "build.js", "fixes.js"]) {
+for (const f of ["prompts.js", "layout.js", "build.js", "fixes.js", "fixes2.js"]) {
   if (fs.existsSync(path.join(extra, f))) require(path.join(extra, f))(test);
 }
 

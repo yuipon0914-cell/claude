@@ -4,7 +4,8 @@
  *   node bin/build.js 1        → books/vol01.json と books/vol01/images/ から dist/vol01/ へ
  *   node bin/build.js --book <json> --images <dir> --out <dir>
  * 書き出すもの：interior.pdf（本文・裁ち落としあり）、cover.pdf（表紙）、kindle.pdf、kindle-cover.jpg
- * 文字が枠からはみ出したら失敗する。絵の解像度不足・比率違いは警告する。
+ * 文字が枠からはみ出したら失敗する（PDF は残さない）。絵の解像度不足・比率違いは警告する。
+ *   --final 1 を付けると、警告（絵が無い・300dpi 未満・比率違い・著者名が空）も失敗にする。入稿用はこちらで書き出す。
  * Playwright は NODE_PATH=$(npm root -g) などで読めるようにしておく。
  */
 "use strict";
@@ -13,10 +14,10 @@ const path = require("path");
 const { pathToFileURL } = require("url");
 const { chromium } = require("playwright");
 const kdp = require("../lib/kdp");
-const { ROOT, characterIds, bookFile } = require("../lib/books");
+const { ROOT, characterIds, bookFile, checkBookFile } = require("../lib/books");
 const { validateManuscript } = require("../lib/manuscript");
 const { renderInterior, renderCover, renderKindleCover } = require("../lib/layout");
-const { checkImages, findImage, IMAGE_NAMES } = require("../lib/images");
+const { checkImages, findImage, isProblem, IMAGE_NAMES } = require("../lib/images");
 const series = require("../data/series.json");
 
 const FONT = path.join(ROOT, "fonts", "ZenMaruGothic-Medium.ttf");
@@ -55,6 +56,32 @@ async function kindleImages(browser, imagesDir, outDir) {
   return dir;
 }
 
+// Chromium は PDF のページ寸法を少し丸めるので、MediaBox を計算どおりの値に書きかえる。
+// 数字の桁数を変えるとファイル内の位置がずれて PDF が壊れるので、同じ文字数で書く。
+function fixMediaBox(file, size) {
+  const want = [size.width * 72, size.height * 72];
+  const fit = (value, original) => {
+    if (!original.includes(".")) return Math.abs(Math.round(value) - value) < 0.01 && String(Math.round(value)).length === original.length ? String(Math.round(value)) : null;
+    const decimals = original.length - String(Math.trunc(value)).length - 1;
+    if (decimals < 1) return null;
+    const out = value.toFixed(decimals);
+    return out.length === original.length ? out : null;
+  };
+  let s = fs.readFileSync(file, "latin1");
+  let failed = false;
+  s = s.replace(/\/MediaBox\s*\[\s*0 0 ([\d.]+) ([\d.]+)\s*\]/g, (all, w, h) => {
+    const nw = fit(want[0], w);
+    const nh = fit(want[1], h);
+    if (!nw || !nh) {
+      failed = true;
+      return all;
+    }
+    return all.replace(`0 0 ${w} ${h}`, `0 0 ${nw} ${nh}`);
+  });
+  if (failed) console.log(`注意：${path.basename(file)} のページ寸法を補正できませんでした`);
+  fs.writeFileSync(file, s, "latin1");
+}
+
 function parseArgs(argv) {
   const a = {};
   for (let i = 0; i < argv.length; i++) {
@@ -83,7 +110,10 @@ async function render(browser, html, out, pdfSize) {
       .filter((el) => el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1)
       .map((el) => el.closest("[data-page]")?.dataset.page || "表紙"),
   );
-  if (pdfSize) await page.pdf({ path: out, width: `${pdfSize.width}in`, height: `${pdfSize.height}in`, printBackground: true, preferCSSPageSize: true });
+  if (pdfSize) {
+    await page.pdf({ path: out, width: `${pdfSize.width}in`, height: `${pdfSize.height}in`, printBackground: true, preferCSSPageSize: true });
+    fixMediaBox(out, pdfSize);
+  }
   await page.close();
   fs.unlinkSync(tmp);
   return overflows;
@@ -91,44 +121,59 @@ async function render(browser, html, out, pdfSize) {
 
 async function main() {
   const a = parseArgs(process.argv.slice(2));
+  const final = Boolean(a.final);
   const ms = JSON.parse(fs.readFileSync(a.book, "utf8"));
-  const errors = validateManuscript(ms, characterIds);
+  const errors = [...validateManuscript(ms, characterIds), ...checkBookFile(a.book, ms)];
   if (errors.length) {
     console.error(`原稿にエラーがあります：\n  ${errors.join("\n  ")}`);
     process.exit(1);
   }
-  fs.mkdirSync(a.out, { recursive: true });
-  for (const w of checkImages(a.images)) console.log(w);
+  const warnings = checkImages(a.images);
+  for (const w of warnings) console.log(w);
   if (!series.author) console.log("注意：data/series.json の author（著者名）が空です");
+  if (final) {
+    const problems = [...warnings.filter(isProblem), ...(series.author ? [] : ["著者名が空です"])];
+    if (problems.length) {
+      console.error(`--final では、次の問題があると書き出せません：\n  ${problems.join("\n  ")}`);
+      process.exit(1);
+    }
+  }
 
+  // いったん一時フォルダに書き出し、はみ出しが無いときだけ out に移す
+  fs.mkdirSync(a.out, { recursive: true });
+  const work = fs.mkdtempSync(path.join(a.out, ".build-"));
   const browser = await chromium.launch();
   const overflow = [];
   try {
     const common = { imagesDir: a.images, fontPath: FONT };
     const pageSize = kdp.interiorPageSizeIn();
-    overflow.push(...(await render(browser, renderInterior(ms, { ...common, kindle: false }), path.join(a.out, "interior.pdf"), pageSize)));
-    overflow.push(...(await render(browser, renderCover(ms, { ...common, pages: kdp.PAGES }), path.join(a.out, "cover.pdf"), kdp.coverSizeIn(kdp.PAGES))));
-    const kindle = { ...common, imagesDir: await kindleImages(browser, a.images, a.out) };
-    overflow.push(...(await render(browser, renderInterior(ms, { ...kindle, kindle: true }), path.join(a.out, "kindle.pdf"), { width: kdp.TRIM, height: kdp.TRIM })));
+    overflow.push(...(await render(browser, renderInterior(ms, { ...common, kindle: false }), path.join(work, "interior.pdf"), pageSize)));
+    overflow.push(...(await render(browser, renderCover(ms, { ...common, pages: kdp.PAGES }), path.join(work, "cover.pdf"), kdp.coverSizeIn(kdp.PAGES))));
+    const kindle = { ...common, imagesDir: await kindleImages(browser, a.images, work) };
+    overflow.push(...(await render(browser, renderInterior(ms, { ...kindle, kindle: true }), path.join(work, "kindle.pdf"), { width: kdp.TRIM, height: kdp.TRIM })));
 
     const cssPx = kdp.TRIM * 96;
     const page = await browser.newPage({ viewport: { width: cssPx, height: cssPx }, deviceScaleFactor: KINDLE_COVER_PX / cssPx });
-    const tmp = path.join(a.out, "kindle-cover.html");
+    const tmp = path.join(work, "kindle-cover.html");
     fs.writeFileSync(tmp, renderKindleCover(ms, kindle));
     await page.goto(pathToFileURL(tmp).href);
     await page.evaluate(() => document.fonts.ready);
-    await page.screenshot({ path: path.join(a.out, "kindle-cover.jpg"), type: "jpeg", quality: 92 });
-    fs.unlinkSync(tmp);
-    fs.rmSync(kindle.imagesDir, { recursive: true, force: true });
+    await page.screenshot({ path: path.join(work, "kindle-cover.jpg"), type: "jpeg", quality: 92 });
   } finally {
     await browser.close();
   }
+  const outputs = ["interior.pdf", "cover.pdf", "kindle.pdf", "kindle-cover.jpg"];
   const pages = [...new Set(overflow)];
   if (pages.length) {
+    fs.rmSync(work, { recursive: true, force: true });
+    // 前回うまく書き出せたファイルが残っていると、まちがえて入稿しかねないので消す
+    for (const f of outputs) fs.rmSync(path.join(a.out, f), { force: true });
     console.error(`文字が枠からはみ出しています：ページ ${pages.join(", ")}`);
     process.exit(1);
   }
-  console.log(`書き出しました：${path.relative(process.cwd(), a.out) || a.out}`);
+  for (const f of outputs) fs.renameSync(path.join(work, f), path.join(a.out, f));
+  fs.rmSync(work, { recursive: true, force: true });
+  console.log(`書き出しました${final ? "（入稿用）" : "（確認用。入稿用は --final 1 を付けて書き出す）"}：${path.relative(process.cwd(), a.out) || a.out}`);
 }
 
 main().catch((e) => {

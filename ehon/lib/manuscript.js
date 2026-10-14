@@ -35,7 +35,7 @@ function validateManuscript(ms, characterIds) {
     errors.push(`おうちの方へ：質問は${QUESTIONS}つ必要です`);
 
   // 物語にもおうちの方へにも、実在の通貨単位は出さない
-  const all = [ms.title, ...spreads.flatMap((s) => [s.text, s.scene]), p.heading, ...(p.body || []), ...(p.questions || [])];
+  const all = [ms.title, ms.learning, ...spreads.flatMap((s) => [s.text, s.scene]), p.heading, ...(p.body || []), ...(p.questions || [])];
   if (all.some((t) => typeof t === "string" && t.includes("円"))) errors.push("「円」が使われています");
   return errors;
 }

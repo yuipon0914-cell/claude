@@ -15,6 +15,14 @@ const AI_NOTE = "イラストは画像生成AIで作成しています。";
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const pad2 = (n) => String(n).padStart(2, "0");
 
+// 文字のまわりの白いふちどり。-webkit-text-stroke は PDF で Type 3 フォントになるので、影を16方向に重ねて作る
+function halo(r, color = "#fffaf0") {
+  return Array.from({ length: 16 }, (_, i) => {
+    const a = (i / 16) * Math.PI * 2;
+    return `${(Math.cos(a) * r).toFixed(2)}px ${(Math.sin(a) * r).toFixed(2)}px 0 ${color}`;
+  }).join(", ");
+}
+
 function css({ fontPath, pageW, pageH }) {
   return `
 @font-face { font-family: "Pokke"; src: url("${pathToFileURL(fontPath).href}"); }
@@ -27,7 +35,8 @@ body { font-family: "Pokke", sans-serif; color: #3b2a1a; }
 .placeholder { position: absolute; top: 0; height: 100%; background: #d9d4cc; border: 2px dashed #8a8175; color: #5a5249;
   font-size: 14pt; display: flex; align-items: flex-end; padding: 0.6in; }
 .text { position: absolute; overflow: hidden; font-size: 26pt; line-height: 1.6; letter-spacing: 0.04em;
-  word-break: keep-all; line-break: strict; paint-order: stroke fill; -webkit-text-stroke: 6px #fffaf0; }
+  word-break: keep-all; line-break: strict; text-shadow: ${halo(3)}; }
+.text .series { text-shadow: ${halo(1.2)}; }
 .center { position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .small { font-size: 11pt; line-height: 1.8; }
 h1 { font-size: 34pt; font-weight: normal; line-height: 1.4; }

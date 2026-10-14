@@ -61,12 +61,12 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 
 ## 見開き4（images/s04.png）
 
-本文：「むぎが とれたら かえすから、いつつ かしてくれる？」
+本文：「いつつ かして。むぎが とれたら、おれいを ひとつ つけて かえすね」
 
-場面：チュチが小さな手を合わせてお願いする。遠くに緑の麦畑
+場面：チュチが小さな手を合わせてお願いし、お礼をつけて返すと約束する。遠くに緑の麦畑
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Chuchi pressing tiny paws together, pleading politely. A green young wheat field in the background. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Chuchi, a tiny grey field mouse with big round ears, a long thin tail, wearing a small yellow backpack. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Chuchi pressing tiny paws together, politely asking and promising to pay back with a thank-you gift. A green young wheat field in the background. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Chuchi, a tiny grey field mouse with big round ears, a long thin tail, wearing a small yellow backpack. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 緑のマフラーを巻いている
@@ -214,7 +214,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 
 ## 見開き12（images/s12.png）
 
-本文：「いつつと、まってくれた おれいの ひとつ。ありがとう！」
+本文：「やくそくの いつつと、おれいの ひとつ。ありがとう！」
 
 場面：チュチがドングリを6つ差し出す
 

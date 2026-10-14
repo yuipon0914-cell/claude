@@ -70,7 +70,7 @@ module.exports = (test) => {
     ms.parents.body = ["とても長い説明の文章です。".repeat(150)];
     const r = run(ms);
     assert.notStrictEqual(r.code, 0);
-    assert.ok(/28/.test(r.log) && r.log.includes("はみ出"), r.log);
+    assert.ok(/ページ 28(,|$)/m.test(r.log) && r.log.includes("はみ出"), r.log);
   });
   test("PDF：解像度不足と比率違いを警告する", () => {
     const r = run(fixture(), { "s01.png": png(1000, 500), "s02.png": png(1000, 1000) });
