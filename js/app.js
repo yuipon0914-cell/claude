@@ -434,7 +434,7 @@
           <thead><tr><th>テスト</th><th>入力</th><th>期待</th><th>実際</th><th>判定</th></tr></thead>
           <tbody>${t.results.map((r) => `
             <tr class="${r.pass ? "pass" : "fail"}">
-              <td>${esc(r.name)}${r.note ? `<div class="small muted">${esc(r.note)}</div>` : ""}</td>
+              <td>${esc(r.name)}${r.note ? `<div class="small muted">${esc(r.note)}</div>` : ""}${r.why ? `<div class="small why ${r.pass ? "muted" : ""}"><strong>なぜ？</strong> ${esc(r.why)}</div>` : ""}</td>
               <td class="mono small">${Object.entries(r.input).map(([k, v]) => `${esc(k)} = ${esc(fmtVal(v))}`).join("<br>")}</td>
               <td>${r.expected ? "許可 (true)" : "停止 (false)"}</td>
               <td>${r.error ? `<span class="ng-text">エラー</span><div class="small">${esc(r.error)}</div>` : r.actual ? "許可 (true)" : "停止 (false)"}${r.logs.length ? `<div class="log small mono">${r.logs.map((l) => "&gt; " + esc(l)).join("<br>")}</div>` : ""}</td>
@@ -546,20 +546,71 @@
     const bs = state.basics[cur.id] || {};
     const code = bs.code ?? cur.starterCode;
     const t = ui.basicsResult[cur.id];
+    const hintsOpen = bs.hints || 0;
+    const showAnswer = ui.basicsAnswer === cur.id || bs.passed;
+    const idx = HL.BASICS.indexOf(cur);
+    const next = HL.BASICS[idx + 1];
+    const G = HL.BASICS_GUIDE;
+    const lines = (codeText, notes) => `<div class="annotated">${codeText.split("\n").map((ln, i) => `<div class="ann-row"><pre class="ann-code"><code>${highlight(ln) || " "}</code></pre><p class="ann-note">${notes[i] ? esc(notes[i]) : ""}</p></div>`).join("")}</div>`;
     return `
-      <section class="page-head"><p class="eyebrow">BASIC DRILLS</p><h1>基礎実践</h1><p class="muted">通信・変数・条件分岐・認証・認可を、小さな演習で確かめます。動画コースとは独立していて、どれからでも始められます。</p></section>
+      <section class="page-head"><p class="eyebrow">BASIC DRILLS</p><h1>基礎実践</h1><p class="muted">通信・変数・条件分岐・認証・認可を、解説つきの小さな演習で身につけます。上から順に進めるのがおすすめですが、どれからでも始められます。</p></section>
+      <details class="panel guide" id="basics-guide" ${state.ui.guideClosed ? "" : "open"}>
+        <summary><strong>${esc(G.title)}</strong></summary>
+        <div class="guide-grid">${G.points.map((p) => `<div><h4>${esc(p.head)}</h4><p class="small">${esc(p.text)}</p></div>`).join("")}</div>
+        <h4>よく出てくる言葉</h4>
+        <table class="vars"><tbody>${G.glossary.map(([k, d]) => `<tr><td><code>${esc(k)}</code></td><td>${esc(d)}</td></tr>`).join("")}</tbody></table>
+      </details>
       <div class="basics">
-        <nav class="panel basics-list">${HL.BASICS.map((b) => `<a href="#/basics/${b.id}" class="${b.id === cur.id ? "current" : ""}"><span class="tag">${esc(b.topic)}</span> ${esc(b.title)} ${state.basics[b.id]?.passed ? '<span class="ok-text">✓</span>' : ""}</a>`).join("")}</nav>
-        <div>
-          <div class="panel"><p class="eyebrow">${esc(cur.topic)}</p><h2>${esc(cur.title)}</h2><p>${esc(cur.explain)}</p>
+        <nav class="panel basics-list" aria-label="演習の一覧">${HL.BASICS.map((b, i) => `<a href="#/basics/${b.id}" class="${b.id === cur.id ? "current" : ""}"><span class="num">${i + 1}</span><span><span class="tag">${esc(b.topic)}</span><br>${esc(b.title)}</span>${state.basics[b.id]?.passed ? '<span class="ok-text" aria-label="合格">✓</span>' : ""}</a>`).join("")}</nav>
+        <div class="basics-main">
+          <div class="panel">
+            <p class="eyebrow">STEP 1 // 解説を読む ・ ${esc(cur.topic)}</p>
+            <h2>${esc(cur.title)}</h2>
+            <p class="goal"><strong>できるようになること：</strong>${esc(cur.goal)}</p>
+            ${cur.lesson.map((p) => `<p>${esc(p)}</p>`).join("")}
+            <p class="analogy"><strong>たとえるなら</strong> ${esc(cur.analogy)}</p>
+            <h4>書き方</h4>
+            <div class="table-scroll"><table class="vars"><tbody>${cur.syntax.map((x) => `<tr><td><code>${esc(x.code)}</code></td><td>${esc(x.explain)}</td></tr>`).join("")}</tbody></table></div>
+            <h4>例：1行ずつ読んでみよう</h4>
+            ${lines(cur.example.code, cur.example.notes)}
+          </div>
+          <div class="panel">
+            <p class="eyebrow">STEP 2 // やること</p>
+            <p><strong>${esc(cur.explain)}</strong></p>
+            <ol class="steps">${cur.steps.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>
+            <h4>入力として使える名前</h4>
             <table class="vars"><tbody>${cur.inputs.map(([n, d]) => `<tr><td><code>${esc(n)}</code></td><td>${esc(d)}</td></tr>`).join("")}</tbody></table>
-            <p class="small muted">ヒント：${esc(cur.hint)}</p></div>
-          <div class="editor-wrap"><div class="editor-bar"><span>drill.js</span><span class="small ${bs.passed ? "ok-text" : "muted"}">${bs.passed ? "✓ 合格済み" : ""}</span></div>
-            <textarea id="basics-editor" class="editor" data-basic="${cur.id}" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="演習コード">${esc(code)}</textarea></div>
+          </div>
+          <p class="eyebrow">STEP 3 // コードを書いて試す</p>
+          <div class="editor-wrap"><div class="editor-bar"><span>drill.js</span><span class="small ${bs.passed ? "ok-text" : "muted"}">${bs.passed ? "✓ 合格済み" : "下のコードを書きかえてください"}</span></div>
+            <textarea id="basics-editor" class="editor small-editor" data-basic="${cur.id}" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="演習コード">${esc(code)}</textarea></div>
           <div class="row"><button class="btn primary" data-action="basics-run" data-id="${cur.id}">▶ テストを実行</button><button class="btn" data-action="basics-reset" data-id="${cur.id}">最初に戻す</button></div>
-          <div aria-live="polite">${t ? testTable(t) : ""}</div>
+          <div aria-live="polite">${t ? testTable(t) + basicsAdvice(t) : ""}</div>
+          ${t?.ok && next ? `<p class="banner ok">合格！ <a href="#/basics/${next.id}">次の演習「${esc(next.title)}」へ →</a></p>` : t?.ok ? `<p class="banner ok">すべての基礎演習が終わりました。<a href="#/cases">事件ファイル</a>に挑戦してみましょう。</p>` : ""}
+          <div class="panel">
+            <p class="eyebrow">わからないときは</p>
+            <h3>ヒント（1つずつ開けます）</h3>
+            ${cur.hints.slice(0, hintsOpen).map((h, i) => `<p class="hint"><strong>ヒント${i + 1}</strong> ${esc(h)}</p>`).join("")}
+            ${hintsOpen < cur.hints.length ? `<button class="btn sm" data-action="basics-hint" data-id="${cur.id}">ヒント${hintsOpen + 1}を見る</button>` : ""}
+            <hr>
+            ${showAnswer ? `<h3>解答例と1行ずつの解説</h3>${lines(cur.solutionCode, cur.solutionNotes)}<p class="small muted">解答例は1つの書き方です。テストに合格すれば、別の書き方でも正解です。見たあとは、自分で打ち直してテストを実行してみましょう。</p>`
+              : `<button class="btn sm" data-action="basics-answer" data-id="${cur.id}">解答例と解説を見る</button><p class="small muted">まずはヒントを試してみましょう。合格すると解答例も自動で表示されます。</p>`}
+          </div>
         </div>
       </div>`;
+  }
+
+  function basicsAdvice(t) {
+    if (t.compileError) return `<p class="banner warn">コードの書き方にまちがいがあります。エラーの行番号を見て、カッコ（ ）や { }、" " の閉じ忘れがないか確かめましょう。わからなければ「最初に戻す」でやり直せます。</p>`;
+    if (t.ok) return "";
+    const failed = t.results.filter((r) => !r.pass);
+    const allowMiss = failed.filter((r) => r.expected === true).length;
+    const blockMiss = failed.filter((r) => r.expected === false).length;
+    let msg = "✕ の行の『なぜ？』を読んで、どの条件が足りないか考えてみましょう。";
+    if (failed.some((r) => r.error)) msg = "エラーが出ている行があります。入力の名前の綴りや、return の書き忘れがないか確かめましょう。";
+    else if (blockMiss && !allowMiss) msg = "止めるべきケースを通してしまっています（条件がゆるすぎます）。";
+    else if (allowMiss && !blockMiss) msg = "通すべきケースを止めてしまっています（条件がきびしすぎます）。";
+    return `<p class="banner warn">${msg} まだわからなければ、下のヒントを開いてみましょう。</p>`;
   }
 
   // ---------- 動画 ----------
@@ -577,6 +628,22 @@
       <div id="video-list" class="video-grid"></div>`;
   }
 
+  /** サムネイル。YouTube の画像が読み込めない環境（公開版など）では、デザインした代わりの表紙を出す */
+  function videoThumb(v) {
+    if (ui.playing === v.id && !HL.EMBED_DISABLED && v.kind !== "channel") {
+      return `<div class="player"><iframe src="${esc(HL.videoEmbedUrl(v.id))}" title="${esc(v.title)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>`;
+    }
+    const ep = (v.title.match(/#\s?(\d+)/) || [])[1];
+    const lec = (v.title.match(/Lecture (\d+)/) || [])[1];
+    const label = v.kind === "channel" ? "CHANNEL" : ep ? `#${ep}` : lec ? `L${lec}` : (v.channel || "VIDEO").replace(/（.*）/, "");
+    const sub = v.channel ? v.channel.replace(/（.*）/, "") : "YouTube";
+    const cover = `<div class="thumb-fallback cat-${esc(v.category)}" aria-hidden="true"><span class="tf-label">${esc(label)}</span><span class="tf-sub">${esc(sub)}</span></div>`;
+    const img = v.kind === "channel" ? "" : `<img class="thumb-img" src="${esc(HL.videoThumbUrl(v.id))}" alt="" loading="lazy" referrerpolicy="no-referrer">`;
+    const inner = `${cover}${img}<span class="thumb-play" aria-hidden="true">${v.kind === "channel" ? "↗" : "▶"}</span>`;
+    if (HL.EMBED_DISABLED || v.kind === "channel") return `<a class="player thumb" href="${esc(HL.videoUrl(v))}" target="_blank" rel="noopener" aria-label="${esc(v.title)} をYouTubeで開く">${inner}</a>`;
+    return `<button class="player thumb" data-action="play" data-id="${esc(v.id)}" aria-label="${esc(v.title)} をここで再生">${inner}</button>`;
+  }
+
   function updateVideoList() {
     const f = ui.videoFilter; const q = f.q.trim().toLowerCase();
     const list = HL.VIDEOS.filter((v) => (f.cat === "all" || v.category === f.cat) && (f.lang === "all" || v.lang === f.lang) && (!q || [v.title, v.description, v.channel || "", HL.VIDEO_CATEGORIES.find((c) => c.id === v.category).label].join(" ").toLowerCase().includes(q)));
@@ -586,7 +653,7 @@
       const cat = HL.VIDEO_CATEGORIES.find((c) => c.id === v.category);
       return `
       <article class="panel video">
-        ${HL.EMBED_DISABLED || v.kind === "channel" ? "" : `<div class="player">${ui.playing === v.id ? `<iframe src="${esc(HL.videoEmbedUrl(v.id))}" title="${esc(v.title)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>` : `<button class="play" data-action="play" data-id="${esc(v.id)}" aria-label="${esc(v.title)} をここで再生"><span>▶ ここで再生</span></button>`}</div>`}
+        ${videoThumb(v)}
         <div class="tags"><span class="tag">${esc(cat.label)}</span><span class="tag">${v.lang === "ja" ? "日本語" : "英語"}</span><span class="tag">${esc(v.level)}</span>${watched ? `<span class="tag ok">視聴済み</span>` : ""}</div>
         <h3>${esc(v.title)}</h3>
         <p class="small muted">${v.kind === "channel" ? "YouTubeチャンネル" : v.channel ? "投稿元：" + esc(v.channel) : "投稿元：YouTubeのページで確認してください"}</p>
@@ -704,6 +771,11 @@
         if (t.ok) bs.passed = true;
         persist(); rerenderKeepScroll(); return;
       }
+      case "basics-hint": {
+        const bs = state.basics[el.dataset.id] = state.basics[el.dataset.id] || {};
+        bs.hints = (bs.hints || 0) + 1; persist(); rerenderKeepScroll(); return;
+      }
+      case "basics-answer": ui.basicsAnswer = el.dataset.id; rerenderKeepScroll(); return;
       case "basics-reset": {
         const b = HL.BASICS.find((x) => x.id === el.dataset.id);
         if (state.basics[b.id]) state.basics[b.id].code = null;
@@ -765,6 +837,10 @@
   });
 
   // エディタで Tab キーを押したら字下げを入れる（Shift+Tab / Esc でフォーカス移動できるように）
+  // サムネイル画像が読み込めなかったら隠して、代わりの表紙を見せる
+  document.addEventListener("error", (ev) => { if (ev.target.classList && ev.target.classList.contains("thumb-img")) ev.target.hidden = true; }, true);
+  document.addEventListener("toggle", (ev) => { if (ev.target.id === "basics-guide") { state.ui.guideClosed = !ev.target.open; persist(); } }, true);
+
   document.addEventListener("keydown", (ev) => {
     const el = ev.target;
     if (!el.classList || !el.classList.contains("editor")) return;

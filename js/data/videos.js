@@ -55,6 +55,7 @@
 
 
   HL.videoUrl = (v) => (typeof v === "object" ? (v.url || `https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}`) : `https://www.youtube.com/watch?v=${encodeURIComponent(v)}`);
+  HL.videoThumbUrl = (id) => `https://i.ytimg.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`;
   HL.videoEmbedUrl = (id) => `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
 
   if (typeof module !== "undefined" && module.exports) module.exports = HL;

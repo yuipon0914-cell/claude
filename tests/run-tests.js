@@ -219,6 +219,21 @@ for (const b of HL.BASICS) {
     assert(b.tests.some((t) => t.expected) && b.tests.some((t) => !t.expected), "両方向のテスト");
   });
 }
+for (const b of HL.BASICS) {
+  test(`基礎 ${b.id}: 解説・ヒント・解答の解説がそろっている`, () => {
+    assert(b.goal && b.lesson.length >= 2 && b.analogy, "解説");
+    assert(b.syntax.length >= 2 && b.example.code && b.steps.length >= 1, "書き方・例・やること");
+    eq(b.example.notes.length, b.example.code.split("\n").length, "例の行ごとの解説の数");
+    eq(b.solutionNotes.length, b.solutionCode.split("\n").length, "解答の行ごとの解説の数");
+    eq(b.hints.length, 3, "ヒントは3段階");
+    b.tests.forEach((t) => assert(t.why, `テスト「${t.name}」に理由がない`));
+  });
+}
+test("テスト結果に理由（why）が含まれる", () => {
+  const b = HL.BASICS[0];
+  const r = MiniJS.runTests(b.starterCode, b.tests);
+  assert(r.results.every((x) => x.why));
+});
 test("基礎実践が必須トピックを含む", () => {
   const topics = new Set(HL.BASICS.map((b) => b.topic));
   for (const t of ["通信", "変数", "条件分岐", "認証", "認可"]) assert(topics.has(t), t);

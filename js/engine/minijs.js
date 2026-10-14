@@ -385,9 +385,9 @@
         let error = null;
         if (!r.returned) error = "return で true / false を返していません";
         else if (typeof r.value !== "boolean") error = `true / false 以外（${fmt(r.value)}）が返されました`;
-        return { name: tc.name, expected: tc.expected, actual: r.returned ? r.value : undefined, pass: !error && r.value === tc.expected, error, logs: r.logs, note: tc.note, input: tc.input };
+        return { name: tc.name, expected: tc.expected, actual: r.returned ? r.value : undefined, pass: !error && r.value === tc.expected, error, logs: r.logs, note: tc.note, why: tc.why, input: tc.input };
       } catch (err) {
-        return { name: tc.name, expected: tc.expected, actual: undefined, pass: false, error: err.message, logs: [], note: tc.note, input: tc.input };
+        return { name: tc.name, expected: tc.expected, actual: undefined, pass: false, error: err.message, logs: [], note: tc.note, why: tc.why, input: tc.input };
       }
     });
     return { ok: results.every((r) => r.pass), compileError: null, results };
