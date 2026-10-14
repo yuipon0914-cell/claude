@@ -1,0 +1,35 @@
+{
+  "volume": 3,
+  "title": "まってみようかな",
+  "guest": "dosshiri",
+  "learning": "少しずつためて、待つと、大きなものが手に入る",
+  "coverSceneEn": "Pokke and Dosshiri the bear looking together into a clay jar half full of acorns, in a sunny early summer forest",
+  "spreads": [
+    { "text": "もうすぐ もりの なつまつり。", "scene": "初夏の森。木と木の間にちょうちんが飾られ始めている", "sceneEn": "An early summer forest. Paper lanterns are being strung between the trees for an upcoming festival", "characters": ["pokke"], "shot": "wide" },
+    { "text": "「はちみつケーキの おみせが でるんだって！」", "scene": "ポッケがおまつりのお知らせの絵を見て、よだれをたらしそうになる", "sceneEn": "Pokke looking at a festival poster with a picture of a honey cake, mouth watering", "characters": ["pokke"], "shot": "medium" },
+    { "text": "でも ケーキは、ドングリ とお。", "scene": "ケーキ屋台の看板に、ドングリが10個描かれている", "sceneEn": "A festival stall sign showing a honey cake with ten acorns painted next to it", "characters": ["pokke"], "shot": "close" },
+    { "text": "ポッケの ドングリは ふたつだけ。いつも すぐ たべちゃうから。", "scene": "ポッケが手のひらの2つのドングリを見て、しょんぼりする", "sceneEn": "Pokke looking down sadly at just two acorns in an open paw", "characters": ["pokke"], "shot": "close" },
+    { "text": "クマの どっしりは、まいにち ドングリを つぼに いれています。", "scene": "どっしりが大きな体で、つぼにドングリを1つそっと入れている", "sceneEn": "Dosshiri the big bear carefully dropping one acorn into a clay jar", "characters": ["dosshiri", "pokke"], "shot": "medium" },
+    { "text": "「どうして たべないの？」「まつと、いいことが あるからさ」", "scene": "ポッケが不思議そうに聞き、どっしりがにっこり笑う", "sceneEn": "Pokke asking curiously, and Dosshiri answering with a slow warm smile", "characters": ["pokke", "dosshiri"], "shot": "medium" },
+    { "text": "ポッケも まねして、ひとつ つぼに ぽとん。", "scene": "ポッケが自分の小さなつぼにドングリを1つ落とす", "sceneEn": "Pokke dropping one acorn into a small clay jar of its own", "characters": ["pokke"], "shot": "close" },
+    { "text": "つぎの ひも ぽとん。そのつぎの ひも ぽとん。", "scene": "朝の場面が続く。毎朝ポッケがつぼにドングリを入れている", "sceneEn": "A sequence of sunny mornings, Pokke dropping an acorn into the jar each day", "characters": ["pokke"], "shot": "wide" },
+    { "text": "「おやつ、たべたいなあ…」 がまん、がまん。", "scene": "ほかの動物がおやつを食べているのを、ポッケががまんして見ている", "sceneEn": "Pokke watching other small forest animals eating snacks, holding back with a determined face", "characters": ["pokke"], "shot": "medium" },
+    { "text": "モモばあ「つぼの なか、どうなってると おもう？」", "scene": "モモばあがつぼを指さしてポッケに問いかける", "sceneEn": "Momoba pointing at the clay jar and asking Pokke a question with a twinkle in her eye", "characters": ["pokke", "momoba"], "shot": "medium" },
+    { "text": "のぞいて みると… ドングリが こんなに たまってる！", "scene": "ポッケがつぼをのぞき、ドングリがたくさん入っていて驚く", "sceneEn": "Pokke peeking into the jar and gasping in surprise at how many acorns have piled up", "characters": ["pokke", "momoba"], "shot": "close" },
+    { "text": "おまつりの ひ。ドングリ とおで、はちみつケーキ！", "scene": "夏祭りの夜。ちょうちんの明かりの中、ポッケがケーキを受け取る", "sceneEn": "The summer festival at dusk, glowing lanterns everywhere. Pokke proudly receiving a honey cake at a stall", "characters": ["pokke", "dosshiri"], "shot": "wide" },
+    { "text": "どっしりと はんぶんこ。まって よかったね。", "scene": "ポッケとどっしりがケーキを分け合って、幸せそうに食べる", "sceneEn": "Pokke and Dosshiri sharing the honey cake under the lanterns, both looking very happy", "characters": ["pokke", "dosshiri"], "shot": "medium" }
+  ],
+  "parents": {
+    "heading": "ためると、大きなものに手がとどく",
+    "body": [
+      "少しずつお金をとっておくことを「貯金」といいます。毎日すぐに使ってしまうと、いつまでも小さなものしか買えません。少しずつためれば、一度には買えない大きなものに手がとどきます。",
+      "子どもにとって「待つ」のはむずかしいことです。ポッケのように、つぼや貯金箱など、たまっていくのが目に見える入れ物を使うと、待つ楽しみが生まれます。",
+      "ためる目標（ポッケなら、はちみつケーキ）を一緒に決めるのもおすすめです。目標があると、がまんが「楽しみ」にかわります。"
+    ],
+    "questions": [
+      "ポッケは、どうして ケーキが かえたのかな？",
+      "どっしりは、まいにち なにを していたかな？",
+      "きみが ためて かいたいものは なにかな？"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "volume": 4,
+  "title": "ドングリ かしてあげる",
+  "guest": "chuchi",
+  "learning": "貸したお金は、お礼（利息）がついて返ってくることがある",
+  "coverSceneEn": "Chuchi the mouse handing a small bundle of acorns back to Pokke with a big thank-you smile, a golden wheat field behind them",
+  "spreads": [
+    { "text": "あめが ふりそうな ひ。ネズミの チュチが やってきました。", "scene": "曇り空の森。黄色いリュックのチュチが、困った顔で走ってくる", "sceneEn": "A cloudy day in the forest. Chuchi the little mouse runs toward Pokke with a worried face", "characters": ["pokke", "chuchi"], "shot": "wide" },
+    { "text": "「おうちの やねに、あなが あいちゃったの」", "scene": "チュチの小さな家の屋根に穴があいている", "sceneEn": "Chuchi's tiny house made of grass and twigs, with a hole in its roof", "characters": ["chuchi"], "shot": "medium" },
+    { "text": "「やねを なおす わらと とりかえる ドングリが たりないの」", "scene": "チュチが空っぽのリュックを見せて、しょんぼりする", "sceneEn": "Chuchi showing an empty yellow backpack, looking sad", "characters": ["pokke", "chuchi"], "shot": "medium" },
+    { "text": "「むぎが とれたら かえすから、いつつ かしてくれる？」", "scene": "チュチが小さな手を合わせてお願いする。遠くに緑の麦畑", "sceneEn": "Chuchi pressing tiny paws together, pleading politely. A green young wheat field in the background", "characters": ["pokke", "chuchi"], "shot": "medium" },
+    { "text": "ポッケは まよいました。だいじな ドングリ、もどってくるかな。", "scene": "ポッケが手の中のドングリを見つめ、心配そうな顔をする", "sceneEn": "Pokke staring at the acorns in its paws with a worried, hesitant face", "characters": ["pokke"], "shot": "close" },
+    { "text": "モモばあ「チュチは、やくそくを まもる こかな？」", "scene": "モモばあがポッケに静かに問いかける", "sceneEn": "Momoba quietly asking Pokke a question, Chuchi waiting a little way off", "characters": ["pokke", "momoba"], "shot": "medium" },
+    { "text": "「うん。チュチは いつも やくそくを まもるよ」", "scene": "ポッケが思い出す。チュチが借りた物をきちんと返している場面", "sceneEn": "Pokke remembering a past moment when Chuchi kindly returned a borrowed basket, shown as a soft dreamy memory", "characters": ["pokke", "chuchi"], "shot": "medium" },
+    { "text": "ポッケは ドングリを いつつ かしてあげました。", "scene": "ポッケがチュチのリュックにドングリを5つ入れてあげる", "sceneEn": "Pokke putting five acorns into Chuchi's yellow backpack, Chuchi beaming with relief", "characters": ["pokke", "chuchi"], "shot": "close" },
+    { "text": "ざあざあ あめの ひ。チュチの おうちは もう ぬれません。", "scene": "大雨の日。屋根を直したチュチの家の中で、チュチがほっとしている", "sceneEn": "A heavy rainy day. Inside the repaired little house with a fresh straw roof, Chuchi is dry and relieved", "characters": ["chuchi"], "shot": "wide" },
+    { "text": "ドングリが ないあいだ、ポッケは ちょっぴり さみしい。", "scene": "巣穴でドングリの少ない入れ物を見て、ポッケが少しさびしそうにする", "sceneEn": "Pokke in the burrow looking at a nearly empty acorn basket, feeling a little lonely", "characters": ["pokke"], "shot": "medium" },
+    { "text": "むぎが きんいろに なった ころ、チュチが やってきました。", "scene": "金色の麦畑。チュチがドングリの包みをかかえて歩いてくる", "sceneEn": "A golden wheat field at harvest time. Chuchi walks toward Pokke carrying a small bundle of acorns", "characters": ["pokke", "chuchi"], "shot": "wide" },
+    { "text": "「いつつと、まってくれた おれいの ひとつ。ありがとう！」", "scene": "チュチがドングリを6つ差し出す", "sceneEn": "Chuchi holding out six acorns to Pokke with a big grateful smile", "characters": ["pokke", "chuchi"], "shot": "close" },
+    { "text": "かしたら、ふえて かえってきた！ ふたりは にっこり。", "scene": "夕日の中、ポッケとチュチが並んで笑う。モモばあが遠くで見守る", "sceneEn": "In the evening sun, Pokke and Chuchi smiling side by side, Momoba watching warmly from a distance", "characters": ["pokke", "chuchi", "momoba"], "shot": "wide" }
+  ],
+  "parents": {
+    "heading": "貸すと、お礼がついて返ってくる（利息）",
+    "body": [
+      "お金を貸すと、貸している間、自分はそのお金を使えません。そのかわりに、返してもらうときに少し上乗せしてもらえることがあります。この上乗せ分を「利息」といいます。",
+      "銀行にお金を預けると利息がつくのも、同じしくみです。銀行は預かったお金を、家を建てたい人やお店を広げたい人に貸し、そこから受け取る利息の一部を預けた人に払っています。",
+      "大事なのは、約束を守る相手に貸すことです。ポッケも「チュチは約束を守る子かな？」と考えてから貸しました。借りる側になったら、約束どおり返すことも大切です。"
+    ],
+    "questions": [
+      "チュチは、どうして ドングリが ほしかったのかな？",
+      "かえってきた ドングリは、いくつに なっていたかな？",
+      "ものを かりたら、どうやって かえすと いいかな？"
+    ]
+  }
+}

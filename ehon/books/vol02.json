@@ -1,0 +1,35 @@
+{
+  "volume": 2,
+  "title": "ほしいもの いっぱい",
+  "guest": "kira",
+  "learning": "「ほしいもの」と「ないとこまるもの」を分けて考える",
+  "coverSceneEn": "Kira the crow proudly showing a tray of sparkling glass marbles to Pokke, whose eyes are shining, in a late autumn forest with falling leaves",
+  "spreads": [
+    { "text": "つめたい かぜが ひゅうう。もうすぐ ふゆが きます。", "scene": "晩秋の森。冷たい風に葉が舞い、ポッケがマフラーをしっかり巻く", "sceneEn": "A late autumn forest. A chilly wind swirls the last leaves, and Pokke pulls the green scarf tighter", "characters": ["pokke"], "shot": "wide" },
+    { "text": "ポッケは ふゆに たべる ドングリを あつめています。", "scene": "ポッケが木の根元の巣穴の前で、ドングリを数えている", "sceneEn": "Pokke counting a small pile of acorns in front of a cozy burrow at the roots of a tree", "characters": ["pokke"], "shot": "medium" },
+    { "text": "「ぴかぴか きらきら、いかが？」カラスの キラが やってきました。", "scene": "カラスのキラが枝の上から舞い降りてくる", "sceneEn": "Kira the crow swooping down from a branch with a cheerful call, carrying a tray", "characters": ["pokke", "kira"], "shot": "wide" },
+    { "text": "キラの おぼんには、きれいな ビーだまが いっぱい。", "scene": "キラのおぼんの上で、色とりどりのビー玉が光っている", "sceneEn": "Close view of Kira's wooden tray full of colorful glass marbles sparkling in the sunlight", "characters": ["kira"], "shot": "close" },
+    { "text": "「わあ、ほしい！ ほしい！ ぜんぶ ほしい！」", "scene": "ポッケがおぼんに飛びつきそうな勢いで、目をきらきらさせる", "sceneEn": "Pokke jumping with excitement, eyes sparkling, almost diving at the tray of marbles", "characters": ["pokke", "kira"], "shot": "medium" },
+    { "text": "「ビーだま ひとつは、ドングリ とお だよ」", "scene": "キラがビー玉を1つくちばしでつまんで見せる", "sceneEn": "Kira holding up a single blue marble in its beak, showing it off to Pokke", "characters": ["pokke", "kira"], "shot": "medium" },
+    { "text": "ポッケの ドングリを ぜんぶ あわせると、ちょうど とお。", "scene": "ポッケが巣穴のドングリを全部ならべて数え、困った顔をする", "sceneEn": "Pokke laying out all the acorns from the burrow in a row and counting them, looking troubled", "characters": ["pokke"], "shot": "medium" },
+    { "text": "「でも ビーだまは たべられない…」ポッケは まよいます。", "scene": "ポッケが片手にドングリ、もう片方の手をビー玉にのばして迷う", "sceneEn": "Pokke torn between choices, one paw holding acorns and the other reaching toward the marbles, frowning in thought", "characters": ["pokke"], "shot": "close" },
+    { "text": "モモばあ「ふゆに なかったら こまるのは、どっちだと おもう？」", "scene": "モモばあがポッケの肩にそっと手を置き、問いかける", "sceneEn": "Momoba gently placing a paw on Pokke's shoulder and asking a question, Kira waiting nearby", "characters": ["pokke", "momoba"], "shot": "medium" },
+    { "text": "「…ドングリ。おなかが すいたら こまるもん」", "scene": "ポッケが少しさびしそうに、でもしっかりと答える", "sceneEn": "Pokke answering with a slightly sad but determined face, hugging the acorns", "characters": ["pokke", "momoba"], "shot": "close" },
+    { "text": "「キラ、ビーだまは また こんどね」", "scene": "ポッケがキラに手をふり、キラも笑ってうなずく", "sceneEn": "Pokke waving to Kira, and Kira nodding with a friendly smile as it flies off", "characters": ["pokke", "kira"], "shot": "wide" },
+    { "text": "ゆきの ひ。すあなの なかは ドングリで いっぱい、ぽかぽか。", "scene": "雪の日。暖かい巣穴の中で、ポッケがドングリに囲まれて満足そうに丸くなる", "sceneEn": "A snowy day. Inside the warm burrow, Pokke curls up contentedly surrounded by stored acorns", "characters": ["pokke"], "shot": "medium" },
+    { "text": "はるに ドングリが あまったら、ビーだまを かおうっと。", "scene": "春の森。ポッケが残ったドングリを手に、キラのところへ向かう", "sceneEn": "A spring forest with fresh green leaves. Pokke walks toward Kira holding a few leftover acorns, looking forward to it", "characters": ["pokke", "kira"], "shot": "wide" }
+  ],
+  "parents": {
+    "heading": "「ほしいもの」と「ないとこまるもの」",
+    "body": [
+      "お金の使い道は、大きく「ないとこまるもの（ニーズ）」と「ほしいもの（ウォンツ）」に分けられます。食べ物や住まいは前者、おもちゃやおやつの多くは後者です。",
+      "ほしいものを持つのは悪いことではありません。大切なのは順番です。まずこまらないための分をとっておき、余った分で楽しみを買う。ポッケも、冬を越してから、のこったドングリでビー玉を買いに行きます。",
+      "お買い物のとき「これは、ないとこまるもの？ ほしいもの？」と一緒に考えてみると、小さな子でも自分で選ぶ練習になります。"
+    ],
+    "questions": [
+      "ポッケが ほしかったのは なにかな？",
+      "ふゆに なかったら こまるのは、ビーだまと ドングリの どっち？",
+      "きみが いま ほしいものと、ないと こまるものは なにかな？"
+    ]
+  }
+}
