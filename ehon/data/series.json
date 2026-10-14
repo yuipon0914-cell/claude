@@ -1,0 +1,16 @@
+{
+  "seriesTitle": "ポッケの おかねの えほん",
+  "author": "",
+  "books": [
+    { "volume": 1, "title": "ポッケと こうかんこ" },
+    { "volume": 2, "title": "ほしいもの いっぱい" },
+    { "volume": 3, "title": "まってみようかな" },
+    { "volume": 4, "title": "ドングリ かしてあげる" },
+    { "volume": 5, "title": "ドングリを うえたら" },
+    { "volume": 6, "title": "ころころ ふえる" },
+    { "volume": 7, "title": "みんなの ジュースやさん" },
+    { "volume": 8, "title": "あめの としも あるよ" },
+    { "volume": 9, "title": "かくしばしょは いくつ？" },
+    { "volume": 10, "title": "うますぎる はなし" }
+  ]
+}
