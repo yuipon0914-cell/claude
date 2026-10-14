@@ -1,0 +1,35 @@
+{
+  "volume": 5,
+  "title": "ドングリを うえたら",
+  "guest": "tsuchio",
+  "learning": "育てて増やすこと（投資）には、時間がかかる",
+  "coverSceneEn": "Pokke and Tsuchio the earthworm looking with wonder at a tiny green oak sprout in soft dark soil, warm spring light",
+  "spreads": [
+    { "text": "ポッケの ドングリが、すこし あまりました。", "scene": "巣穴の前で、ポッケが余ったドングリを手にのせている", "sceneEn": "Pokke in front of the burrow, holding a few extra acorns in an open paw, wondering what to do with them", "characters": ["pokke"], "shot": "medium" },
+    { "text": "モモばあ「たべる？ しまう？ それとも うえてみる？」", "scene": "モモばあが指を3本立てて、選び方を問いかける", "sceneEn": "Momoba holding up three fingers, offering Pokke three choices with a gentle smile", "characters": ["pokke", "momoba"], "shot": "medium" },
+    { "text": "「うえる？」すると ミミズの ツチオが かおを だしました。", "scene": "地面からミミズのツチオがひょっこり顔を出す", "sceneEn": "Tsuchio the earthworm popping up out of the ground right next to Pokke, who is startled", "characters": ["pokke", "tsuchio"], "shot": "close" },
+    { "text": "「ぼくが つちを ふかふかに してあげる」", "scene": "ツチオが土の中をくねくね進み、土がふかふかになっていく", "sceneEn": "Tsuchio wriggling through the earth, turning the soil soft and crumbly, with a proud face", "characters": ["tsuchio"], "shot": "medium" },
+    { "text": "ポッケは ドングリを ひとつ、つちの なかに うめました。", "scene": "ポッケがふかふかの土にドングリを1つ埋め、手でとんとんする", "sceneEn": "Pokke burying one acorn in the soft soil and patting the ground gently", "characters": ["pokke", "tsuchio"], "shot": "close" },
+    { "text": "つぎの ひ。「あれ？ なにも はえてない」", "scene": "翌朝、ポッケが埋めた場所をのぞきこみ、がっかりする", "sceneEn": "The next morning, Pokke crouching over the spot, disappointed to see nothing growing", "characters": ["pokke"], "shot": "medium" },
+    { "text": "「ほって みようかな」「だめだめ。まだまだ」", "scene": "ポッケが掘ろうとし、ツチオがあわてて止める", "sceneEn": "Pokke about to dig the acorn up, and Tsuchio hurriedly stopping Pokke", "characters": ["pokke", "tsuchio"], "shot": "medium" },
+    { "text": "ゆきの したで、ドングリは じっと ねむっています。", "scene": "雪の断面図。雪の下の土の中でドングリが静かに眠っている", "sceneEn": "A cross-section view: snow on top, and beneath it in the dark soil a single acorn resting quietly, Tsuchio curled up nearby", "characters": ["tsuchio"], "shot": "wide" },
+    { "text": "はる。ちいさな めが、ぴょこん！", "scene": "春。土から小さな芽が出て、ポッケが目を丸くして喜ぶ", "sceneEn": "Spring. A tiny green sprout has popped out of the soil, and Pokke is overjoyed", "characters": ["pokke", "tsuchio"], "shot": "close" },
+    { "text": "なんども なつが きて、なんども ふゆが きて…", "scene": "同じ場所で季節がめぐる様子。苗木が少しずつ大きくなる", "sceneEn": "The same spot shown through changing seasons, summer, autumn, winter, spring, as a young sapling slowly grows taller", "characters": ["pokke"], "shot": "wide" },
+    { "text": "ほそい きは、すこしずつ ふとく たかく なりました。", "scene": "若い木の横で、ポッケが背比べをしている", "sceneEn": "Pokke standing next to a young oak tree, comparing heights, the tree now much taller than Pokke", "characters": ["pokke"], "shot": "medium" },
+    { "text": "そして ある あき。えだに ドングリが いっぱい！", "scene": "立派な木になり、枝にドングリがたくさんなっている", "sceneEn": "An autumn day. The oak has grown big and strong, its branches heavy with many acorns", "characters": ["pokke", "tsuchio"], "shot": "wide" },
+    { "text": "「ひとつ うえたら、こんなに なった！」", "scene": "ポッケとツチオが、落ちてきたドングリに囲まれて大喜びする", "sceneEn": "Pokke and Tsuchio celebrating, surrounded by acorns falling from the big tree", "characters": ["pokke", "tsuchio", "momoba"], "shot": "medium" }
+  ],
+  "parents": {
+    "heading": "投資は「育てる」こと",
+    "body": [
+      "ドングリを食べればすぐにおなかはふくれますが、植えれば何年もあとに、たくさんのドングリを実らせる木になります。今あるお金を、将来ふえることを期待して何かに使うことを「投資」といいます。",
+      "投資には時間がかかります。植えた次の日に芽が出ないのと同じで、すぐに結果は出ません。毎日ほり返して確かめたくなる気持ちをこらえて、じっくり待つことが大切です。",
+      "また、植えたドングリはしばらく食べられません。投資にまわすのは、当面の暮らしにこまらない「余ったお金」で、というのが基本の考え方です。"
+    ],
+    "questions": [
+      "ポッケは、あまった ドングリを どうしたかな？",
+      "めが でるまで、どのくらい かかったかな？",
+      "ツチオは どうして 「まだまだ」って いったのかな？"
+    ]
+  }
+}

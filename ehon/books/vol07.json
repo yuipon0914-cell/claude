@@ -1,0 +1,35 @@
+{
+  "volume": 7,
+  "title": "みんなの ジュースやさん",
+  "guest": "dan",
+  "learning": "お店（会社）の仲間になって、もうけを分けてもらう（株式と配当）",
+  "coverSceneEn": "Dan the badger shopkeeper serving fruit juice at a cheerful wooden juice stand in the forest, Pokke holding a leaf card proudly in front",
+  "spreads": [
+    { "text": "アナグマの ダンさんは、ジュースやさんを ひらきたい。", "scene": "ダンさんが森の空き地で、お店の設計図を広げている", "sceneEn": "Dan the badger in a forest clearing, spreading out a hand-drawn plan for a juice stand", "characters": ["dan"], "shot": "wide" },
+    { "text": "「でも、きのみを しぼる どうぐが かえないんだ」", "scene": "ダンさんが空っぽのドングリ袋を見せて、困った顔", "sceneEn": "Dan showing an empty acorn pouch with a troubled face, a picture of a fruit press on the plan", "characters": ["pokke", "dan"], "shot": "medium" },
+    { "text": "「みんなで すこしずつ ドングリを だして、なかまに ならない？」", "scene": "ダンさんが森の仲間たちに呼びかける。動物たちが集まってくる", "sceneEn": "Dan calling out to the forest animals, who gather around curiously, Pokke among them", "characters": ["pokke", "dan"], "shot": "wide" },
+    { "text": "「もうかったら、だした ドングリに あわせて わけるよ」", "scene": "ダンさんがドングリの数に合わせて分ける様子を、身ぶりで説明する", "sceneEn": "Dan explaining with big gestures how earnings will be shared, drawing acorn piles of different sizes on the ground", "characters": ["pokke", "dan"], "shot": "medium" },
+    { "text": "ポッケは ドングリを ふたつ だしました。", "scene": "ポッケがダンさんの箱にドングリを2つ入れる", "sceneEn": "Pokke dropping two acorns into Dan's wooden box, other animals adding theirs too", "characters": ["pokke", "dan"], "shot": "close" },
+    { "text": "ダンさんは はっぱの カードを くれました。「なかまの しるし」", "scene": "ダンさんがポッケに、印のついた葉っぱのカードを渡す", "sceneEn": "Dan handing Pokke a special leaf card with a little juice-cup stamp, a sign of being a partner", "characters": ["pokke", "dan"], "shot": "close" },
+    { "text": "ジュースやさんが ひらきました。「いらっしゃい！」", "scene": "かわいい木のジュース屋台が開店し、旗がはためく", "sceneEn": "A cute wooden juice stand opens with little flags fluttering, Dan welcoming customers", "characters": ["dan"], "shot": "wide" },
+    { "text": "あつい なつ。おみせは おきゃくさんで いっぱい！", "scene": "暑い夏の日、屋台の前に動物たちの行列ができている", "sceneEn": "A hot summer day. A long line of forest animals waiting happily in front of the juice stand", "characters": ["dan"], "shot": "wide" },
+    { "text": "「ダンさんの ジュース、おいしいよ」 ポッケも みんなに しょうかい。", "scene": "ポッケが友だちにジュースをすすめ、自分のお店のように誇らしげ", "sceneEn": "Pokke proudly telling friends about Dan's juice, as if it were Pokke's own shop", "characters": ["pokke"], "shot": "medium" },
+    { "text": "なつの おわり。ダンさんが なかまを あつめました。", "scene": "夏の終わりの夕方、ダンさんの前に仲間たちが集まる", "sceneEn": "An evening at the end of summer. The partners gather in front of Dan's juice stand", "characters": ["pokke", "dan"], "shot": "wide" },
+    { "text": "「もうかったよ。わけまえを どうぞ」", "scene": "ダンさんがポッケに分け前のドングリを渡す", "sceneEn": "Dan handing Pokke a share of acorns, both smiling widely", "characters": ["pokke", "dan"], "shot": "close" },
+    { "text": "モモばあ「おみせが はやらなかったら、どうなると おもう？」", "scene": "帰り道、モモばあがポッケに問いかける", "sceneEn": "On the way home, Momoba asks Pokke a question while they walk together", "characters": ["pokke", "momoba"], "shot": "medium" },
+    { "text": "「わけまえが へるかも。どんな おみせか、よく みなきゃね」", "scene": "ポッケが葉っぱのカードを見つめて考える。夕日", "sceneEn": "Pokke thoughtfully looking at the leaf card in the sunset light, Momoba smiling beside", "characters": ["pokke", "momoba"], "shot": "medium" }
+  ],
+  "parents": {
+    "heading": "お店の仲間になる（株式と配当）",
+    "body": [
+      "お店や会社を始めたり大きくしたりするには、お金が必要です。そこで、たくさんの人から少しずつお金を出してもらい、そのかわりに会社の「持ち主の一人」になってもらうしくみがあります。これが「株式」です。ポッケが受け取った葉っぱのカードが、株にあたります。",
+      "会社がもうかると、そのもうけの一部が、出したお金に応じて持ち主に分けられます。これを「配当」といいます。会社が成長すれば、株そのものの値打ちが上がることもあります。",
+      "ただし、会社がいつももうかるとはかぎりません。はやらなければ分け前は減り、出したお金が戻らないこともあります。だから、どんな会社かをよく見て選ぶことが大切です。"
+    ],
+    "questions": [
+      "ポッケは ダンさんに なにを だしたかな？",
+      "はっぱの カードは、なんの しるしだったかな？",
+      "おみせが はやらなかったら、どうなるかな？"
+    ]
+  }
+}

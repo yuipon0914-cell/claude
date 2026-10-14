@@ -1,0 +1,35 @@
+{
+  "volume": 8,
+  "title": "あめの としも あるよ",
+  "guest": "pichon",
+  "learning": "増える年も減る年もある。あわてずに長い目で見る（値動き）",
+  "coverSceneEn": "Pokke and Pichon the frog standing together under a big yellow leaf umbrella in gentle rain, small oak trees around them",
+  "spreads": [
+    { "text": "ことしの なつは、あめ ばっかり。", "scene": "雨が降り続く森。ポッケが巣穴から空を見上げる", "sceneEn": "A forest in a long spell of rain. Pokke peeks out of the burrow at the grey sky", "characters": ["pokke"], "shot": "wide" },
+    { "text": "ポッケの もりの ドングリは、ほんの すこししか なりません。", "scene": "第6巻で育てた林。枝にドングリがほとんどない", "sceneEn": "Pokke's small oak woodland, but the branches have only a few acorns this year", "characters": ["pokke"], "shot": "wide" },
+    { "text": "「たいへん！ ぼくの もりは もう だめだ…」", "scene": "ポッケが頭をかかえてあわてる", "sceneEn": "Pokke holding its head in panic, looking very upset", "characters": ["pokke"], "shot": "close" },
+    { "text": "「きを ぜんぶ、ほかの ものと とりかえちゃおうかな」", "scene": "ポッケが木を見上げて、思いつめた顔をする", "sceneEn": "Pokke looking up at the trees with a desperate, rash expression", "characters": ["pokke"], "shot": "medium" },
+    { "text": "「まって まって」 カエルの ピチョンが やってきました。", "scene": "黄色い葉っぱのかさをさしたピチョンが、ぴょんぴょん跳んでくる", "sceneEn": "Pichon the frog hopping over cheerfully under a big yellow leaf umbrella", "characters": ["pokke", "pichon"], "shot": "medium" },
+    { "text": "「あめの としも あれば、はれの としも あるよ」", "scene": "ピチョンが雨を楽しむように、のんびり話す", "sceneEn": "Pichon calmly enjoying the rain, speaking in a relaxed and happy way", "characters": ["pokke", "pichon"], "shot": "medium" },
+    { "text": "モモばあ「これまでの としは、どうだったと おもう？」", "scene": "雨宿りの木の下で、モモばあが問いかける", "sceneEn": "Under a sheltering tree, Momoba asks Pokke a question while the rain falls softly", "characters": ["pokke", "momoba", "pichon"], "shot": "medium" },
+    { "text": "すくない としも、おおい としも あったっけ。", "scene": "ポッケの思い出。実の多い年と少ない年が、絵日記のように並ぶ", "sceneEn": "A dreamy memory shown like picture diary pages: some autumns with many acorns, some with few, but more good years overall", "characters": ["pokke"], "shot": "wide" },
+    { "text": "「でも、ことしの ごはんは どうしよう」", "scene": "ポッケがおなかを押さえて心配する", "sceneEn": "Pokke holding its tummy with a worried face", "characters": ["pokke"], "shot": "close" },
+    { "text": "だいじょうぶ。つぼの なかに、とっておいた ドングリが あるもの。", "scene": "第3巻のつぼに、ドングリがちゃんと入っている", "sceneEn": "Pokke opening the old clay jar and finding it still full of saved acorns, relieved", "characters": ["pokke"], "shot": "close" },
+    { "text": "ポッケは きを そのままに して、まつことに しました。", "scene": "ポッケが木の幹をなでて、待つことを決める", "sceneEn": "Pokke gently patting the trunk of an oak tree, deciding to be patient", "characters": ["pokke", "pichon"], "shot": "medium" },
+    { "text": "つぎの とし。おひさま ぽかぽか、ドングリ どっさり！", "scene": "晴れた秋。林の木々にドングリがたくさん実っている", "sceneEn": "A bright sunny autumn the next year. The oak woodland is loaded with acorns", "characters": ["pokke", "pichon"], "shot": "wide" },
+    { "text": "「あめの としも あるよね」 ふたりは かさを くるり。", "scene": "ポッケとピチョンが葉っぱのかさを回して、笑い合う", "sceneEn": "Pokke and Pichon twirling leaf umbrellas and laughing together in the sunshine", "characters": ["pokke", "pichon"], "shot": "medium" }
+  ],
+  "parents": {
+    "heading": "増える年も、減る年もある（値動き）",
+    "body": [
+      "投資したものの値打ちは、毎日のように上がったり下がったりします。これを「値動き」といいます。ドングリの実りに雨の年と晴れの年があるように、よい時期も悪い時期もあるのがふつうです。",
+      "悪い時期にあわてて手放すと、あとで回復したときの実りを受け取れません。ポッケも木を手放さずに待ったことで、次の年の実りを受け取れました。長い目で見ることが大切です。",
+      "あわてずに待てたのは、つぼに食べる分をとっておいたからです。投資とは別に、暮らしにこまらないお金を用意しておくと、悪い時期でも落ち着いていられます。"
+    ],
+    "questions": [
+      "あめの としは、ドングリが どうなったかな？",
+      "ポッケは、きを どうしたかな？",
+      "ポッケが こまらなかったのは、どうしてかな？"
+    ]
+  }
+}

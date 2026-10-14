@@ -1,0 +1,35 @@
+{
+  "volume": 6,
+  "title": "ころころ ふえる",
+  "guest": "bunta",
+  "learning": "増えた分をまた育てると、もっと増える（複利）",
+  "coverSceneEn": "Pokke rolling a growing snowball down a gentle hill while Bunta the honeybee flies alongside, small oak trees in the background",
+  "spreads": [
+    { "text": "ポッケの きに、ことしも ドングリが なりました。", "scene": "第5巻で育てた木に、今年もドングリが実っている", "sceneEn": "Pokke's own oak tree, full of acorns again this year, Pokke looking up proudly", "characters": ["pokke"], "shot": "wide" },
+    { "text": "ハチの ブンタが かぞえます。「ぜんぶで とお！」", "scene": "ミツバチのブンタが、ドングリの上を飛びながら数える", "sceneEn": "Bunta the honeybee hovering over a pile of acorns, counting them one by one", "characters": ["pokke", "bunta"], "shot": "medium" },
+    { "text": "「ぜんぶ たべちゃおうかな」 ポッケは よだれ。", "scene": "ポッケがドングリの山を前に、よだれをたらしそうな顔", "sceneEn": "Pokke gazing at the pile of acorns with a hungry, drooling face", "characters": ["pokke"], "shot": "close" },
+    { "text": "モモばあ「すこし うえたら、どうなると おもう？」", "scene": "モモばあが若い木を指さして問いかける", "sceneEn": "Momoba pointing toward Pokke's oak tree and asking a thoughtful question", "characters": ["pokke", "momoba"], "shot": "medium" },
+    { "text": "ポッケは みっつ うえて、のこりを たべました。", "scene": "ポッケが3つを土に植え、残りをおいしそうに食べる", "sceneEn": "Pokke planting three acorns in a row and happily eating the rest", "characters": ["pokke"], "shot": "medium" },
+    { "text": "なんねんか たつと、きが よっつに なりました。", "scene": "数年後。最初の木のまわりに、3本の若い木が育っている", "sceneEn": "A few years later. Around the first oak tree, three young oak trees have grown", "characters": ["pokke", "bunta"], "shot": "wide" },
+    { "text": "ブンタ「こんどは ドングリが、よんじゅう！」", "scene": "4本の木の下に、たくさんのドングリ。ブンタがびっくりして数える", "sceneEn": "Many acorns under four oak trees. Bunta counts them in amazement, wings buzzing", "characters": ["pokke", "bunta"], "shot": "medium" },
+    { "text": "また すこし うえて、のこりを たべて…", "scene": "ポッケがまた少し植え、残りを食べる。くり返しを感じさせる構図", "sceneEn": "Pokke once again planting a few acorns and enjoying the rest, the same happy routine", "characters": ["pokke"], "shot": "medium" },
+    { "text": "きは どんどん ふえて、ちいさな はやしに なりました。", "scene": "木が増えて、小さな林になっている", "sceneEn": "The trees have multiplied into a small woodland, sunlight streaming through", "characters": ["pokke", "bunta"], "shot": "wide" },
+    { "text": "「ふえた ドングリが、また ドングリを ふやすんだね」", "scene": "ポッケが林を見上げて気づく。ブンタがうなずく", "sceneEn": "Pokke looking up at the woodland with a look of realization, Bunta nodding", "characters": ["pokke", "bunta"], "shot": "medium" },
+    { "text": "ゆきだまと おなじ。ころころ ころがすほど、おおきく なる。", "scene": "冬の丘でポッケが雪玉を転がし、どんどん大きくなる", "sceneEn": "A winter hill. Pokke rolling a snowball that grows bigger and bigger as it rolls", "characters": ["pokke"], "shot": "wide" },
+    { "text": "ブンタ「はやく うえるほど、たくさん ふえるよ」", "scene": "ブンタがポッケの肩にとまり、話しかける", "sceneEn": "Bunta perched on Pokke's shoulder, explaining something cheerfully", "characters": ["pokke", "bunta"], "shot": "close" },
+    { "text": "ポッケの もりで、みんなが ドングリを ひろっています。", "scene": "秋の林で、森の動物たちがドングリを拾って楽しそう", "sceneEn": "An autumn woodland where many small forest animals happily gather acorns, Pokke and Bunta watching with joy", "characters": ["pokke", "bunta", "momoba"], "shot": "wide" }
+  ],
+  "parents": {
+    "heading": "増えた分が、また増える（複利）",
+    "body": [
+      "育てて増えた分を使わずに、もう一度育てにまわすと、次は「元の分」と「増えた分」の両方が増えていきます。これを「複利」といいます。雪玉が転がるほど大きくなるように、時間がたつほど増え方が大きくなるのが特徴です。",
+      "ポッケは毎年、全部を食べずに少しだけ植えました。最初の数年はあまり差がありませんが、何度もくり返すうちに、一本の木が林になりました。",
+      "複利の力をいちばん生かせるのは「時間」です。早く始めて長く続けるほど、増え方は大きくなります。子どものうちからこの考え方にふれておくことには、大きな意味があります。"
+    ],
+    "questions": [
+      "ポッケは ドングリを ぜんぶ たべたかな？",
+      "きが ふえたのは、どうしてかな？",
+      "ゆきだまは、ころがすと どうなるかな？"
+    ]
+  }
+}

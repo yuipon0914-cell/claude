@@ -1,0 +1,35 @@
+{
+  "volume": 9,
+  "title": "かくしばしょは いくつ？",
+  "guest": "jay",
+  "learning": "ひとつの場所に全部を置かず、分けておく（分散）",
+  "coverSceneEn": "Jay the bird and Pokke hiding acorns in many different spots around a wide forest, tree hollows, under rocks, among roots",
+  "spreads": [
+    { "text": "ポッケは ドングリを ぜんぶ、かわの そばの あなに かくしました。", "scene": "川のそばの穴に、ポッケがドングリを全部しまいこむ", "sceneEn": "Pokke stuffing all of the acorns into one hole near a river bank", "characters": ["pokke"], "shot": "wide" },
+    { "text": "「ひとつに まとめると らくちん」", "scene": "ポッケが穴の前で満足そうに手をはたく", "sceneEn": "Pokke dusting off its paws in front of the hole, looking pleased and satisfied", "characters": ["pokke"], "shot": "medium" },
+    { "text": "カケスの ジェイは、あちこちに すこしずつ かくしています。", "scene": "ジェイが木のうろ、石の下、根っこのすき間に少しずつ隠している", "sceneEn": "Jay the bird hiding a few acorns in many different places: a tree hollow, under a rock, among roots", "characters": ["jay"], "shot": "wide" },
+    { "text": "「そんなに あちこち、めんどうじゃない？」「これで いいのさ」", "scene": "ポッケが不思議そうに聞き、ジェイが胸をはる", "sceneEn": "Pokke asking with a puzzled face, and Jay puffing out its chest confidently", "characters": ["pokke", "jay"], "shot": "medium" },
+    { "text": "ある よる、ごうごう あらしが きました。", "scene": "嵐の夜。木々が大きくゆれ、雨が激しく降る", "sceneEn": "A stormy night. Trees sway in the strong wind and heavy rain pours down, drawn softly and not too scary", "characters": [], "shot": "wide" },
+    { "text": "かわの みずが ざぶざぶ あふれて…", "scene": "川があふれて、岸辺に水が広がる", "sceneEn": "The river overflowing its banks, water spreading over the riverside, gentle and not frightening", "characters": [], "shot": "wide" },
+    { "text": "つぎの あさ。ポッケの かくしばしょは、ながされて いました。", "scene": "朝、ポッケが川辺に来ると、穴が水で流されてなくなっている", "sceneEn": "The next morning, Pokke arrives at the river bank and finds the hiding hole washed away", "characters": ["pokke"], "shot": "medium" },
+    { "text": "「ぜんぶ なくなっちゃった…」 ポッケは えんえん なきました。", "scene": "ポッケがすわりこんで泣いている", "sceneEn": "Pokke sitting down and crying, tears falling, the scarf drooping", "characters": ["pokke"], "shot": "close" },
+    { "text": "ジェイの かくしばしょも、ひとつ ながされました。でも…", "scene": "ジェイの隠し場所のひとつも水に流されている", "sceneEn": "One of Jay's hiding spots by the water has also been washed away, Jay looking at it calmly", "characters": ["jay"], "shot": "medium" },
+    { "text": "「ほかの ばしょの ドングリは、ぶじだったよ」", "scene": "木のうろや石の下のドングリは無事。ジェイがほっとする", "sceneEn": "Jay checking the tree hollow and the space under the rock, where the acorns are safe and dry", "characters": ["pokke", "jay"], "shot": "medium" },
+    { "text": "モモばあ「ジェイと ポッケの ちがいは、なにかな？」", "scene": "モモばあがポッケの頭をなでながら問いかける", "sceneEn": "Momoba stroking Pokke's head comfortingly and asking a gentle question, Jay beside them", "characters": ["pokke", "momoba", "jay"], "shot": "medium" },
+    { "text": "「ぼくは ひとつの ばしょに ぜんぶ…」 ジェイが すこし わけてくれました。", "scene": "ポッケが気づき、ジェイがドングリを少し分けてあげる", "sceneEn": "Pokke realizing the mistake, and Jay kindly sharing some acorns with Pokke", "characters": ["pokke", "jay"], "shot": "close" },
+    { "text": "こんどは もりの あちこちに。ポッケと ジェイは にっこり。", "scene": "晴れた日、ポッケとジェイが森のあちこちに少しずつドングリを隠す", "sceneEn": "A sunny day. Pokke and Jay happily hiding acorns little by little in many places around the forest", "characters": ["pokke", "jay"], "shot": "wide" }
+  ],
+  "parents": {
+    "heading": "分けておくと、全部はなくならない（分散）",
+    "body": [
+      "「卵はひとつのかごに盛るな」ということわざがあります。かごを落とすと、卵が全部割れてしまうからです。投資でも、ひとつのものに全部をまとめると、それがだめになったときに全部を失ってしまいます。",
+      "いろいろな会社や、いろいろな種類のものに分けて投資しておくと、どれかがうまくいかなくても、ほかでカバーできます。これを「分散」といいます。カケスのジェイが、ドングリをあちこちに隠していたのと同じです。",
+      "分散しても損をしないわけではありません。ジェイも隠し場所をひとつ失いました。分散は「全部を失う」ことを防ぐための知恵です。"
+    ],
+    "questions": [
+      "ポッケは ドングリを どこに かくしたかな？",
+      "ジェイの ドングリは、どうして のこったのかな？",
+      "だいじな ものを なくさないには、どうしたら いいかな？"
+    ]
+  }
+}
