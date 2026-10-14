@@ -13,6 +13,7 @@ function validateManuscript(ms, characterIds) {
   const known = new Set(characterIds);
   if (!Number.isInteger(ms.volume) || ms.volume < 1) errors.push("volume が正しくありません");
   for (const key of ["title", "learning"]) if (!ms[key]) errors.push(`${key} がありません`);
+  if (!ms.coverSceneEn) errors.push("coverSceneEn（表紙の場面の英訳）がありません");
   if (!known.has(ms.guest)) errors.push(`ゲスト ${ms.guest} はキャラクター一覧にいません`);
 
   const spreads = Array.isArray(ms.spreads) ? ms.spreads : [];
@@ -21,6 +22,7 @@ function validateManuscript(ms, characterIds) {
     const at = `見開き${i + 1}`;
     for (const e of checkSpreadText(s.text)) errors.push(`${at}：${e}`);
     if (!s.scene) errors.push(`${at}：scene がありません`);
+    if (!s.sceneEn) errors.push(`${at}：sceneEn（場面の英訳）がありません`);
     if (!Array.isArray(s.characters)) errors.push(`${at}：characters がありません`);
     else for (const c of s.characters) if (!known.has(c)) errors.push(`${at}：キャラクター ${c} は一覧にいません`);
     if (!SHOTS.includes(s.shot)) errors.push(`${at}：shot は ${SHOTS.join(" / ")} のどれかです`);

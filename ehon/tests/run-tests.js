@@ -5,6 +5,7 @@
  */
 "use strict";
 const assert = require("assert");
+const fs = require("fs");
 const path = require("path");
 
 const tests = [];
@@ -42,9 +43,11 @@ function sample() {
     title: "ポッケと こうかんこ",
     guest: "mimi",
     learning: "お金は交換の道具",
+    coverSceneEn: "Pokke and Mimi trading",
     spreads: Array.from({ length: 13 }, (_, i) => ({
       text: "ポッケは どんぐりを みつけました。",
       scene: `場面${i + 1}`,
+      sceneEn: `scene ${i + 1}`,
       characters: ["pokke"],
       shot: "wide",
     })),
@@ -85,6 +88,11 @@ for (const where of ["scene", "parents"]) {
     assert.ok(validateManuscript(ms, IDS).some((e) => e.includes("円")));
   });
 }
+test("原稿：sceneEn がないとエラー", () => {
+  const ms = sample();
+  delete ms.spreads[2].sceneEn;
+  assert.ok(validateManuscript(ms, IDS).some((e) => e.includes("見開き3") && e.includes("sceneEn")));
+});
 test("原稿：shot が不正ならエラー", () => {
   const ms = sample();
   ms.spreads[0].shot = "zoom";
@@ -94,11 +102,7 @@ test("原稿：shot が不正ならエラー", () => {
 // ---- 追加のテストはここから下（後の作業で増やす） ----
 const extra = path.join(__dirname, "extra");
 for (const f of ["prompts.js", "layout.js", "build.js"]) {
-  try {
-    require(path.join(extra, f))(test);
-  } catch (e) {
-    if (e.code !== "MODULE_NOT_FOUND" || !String(e.message).includes(path.join(extra, f))) throw e;
-  }
+  if (fs.existsSync(path.join(extra, f))) require(path.join(extra, f))(test);
 }
 
 (async () => {
