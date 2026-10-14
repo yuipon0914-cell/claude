@@ -1,0 +1,113 @@
+{
+  "volume": 1,
+  "title": "ポッケと こうかんこ",
+  "guest": "mimi",
+  "learning": "お金は、ほしい物ととりかえるための道具",
+  "coverSceneEn": "Pokke happily holding out acorns to Mimi, who offers a big carrot in return, in a small autumn vegetable field at the edge of the forest",
+  "spreads": [
+    {
+      "text": "あきの もり。ポッケは ドングリを いっぱい ひろいました。",
+      "scene": "秋の森。ポッケが落ち葉の上でドングリを拾い、ほっぺをふくらませている",
+      "sceneEn": "An autumn forest full of fallen leaves. Pokke is gathering many acorns from the ground, cheeks puffed up with acorns",
+      "characters": ["pokke"],
+      "shot": "wide"
+    },
+    {
+      "text": "「ドングリ ばっかり、もう あきちゃった。ほかのも たべたいな」",
+      "scene": "切り株に座ったポッケが、ドングリの山を前につまらなそうな顔をしている",
+      "sceneEn": "Pokke sitting on a tree stump in front of a pile of acorns, looking bored and a little grumpy",
+      "characters": ["pokke"],
+      "shot": "medium"
+    },
+    {
+      "text": "もりの はずれに、ミミの はたけが ありました。",
+      "scene": "森のはずれの小さな畑。にんじんの葉が並び、ミミが世話をしている。ポッケが木のかげからのぞく",
+      "sceneEn": "A small vegetable field at the edge of the forest with rows of carrot tops. Mimi is tending the field while Pokke peeks out from behind a tree",
+      "characters": ["pokke", "mimi"],
+      "shot": "wide"
+    },
+    {
+      "text": "「ミミ、にんじん ちょうだい！」「ただでは あげられないよ」",
+      "scene": "ポッケが手をのばしてお願いし、ミミがにんじんを胸にかかえて首をふる",
+      "sceneEn": "Pokke reaching out and asking eagerly, while Mimi hugs a carrot to her chest and shakes her head politely",
+      "characters": ["pokke", "mimi"],
+      "shot": "medium"
+    },
+    {
+      "text": "ポッケは かんがえました。ほっぺの なかには…",
+      "scene": "ポッケが腕を組んで考えこみ、ふくらんだほっぺに手をあてる",
+      "sceneEn": "Pokke thinking hard with arms crossed, one paw touching a puffed-up cheek full of acorns",
+      "characters": ["pokke"],
+      "shot": "close"
+    },
+    {
+      "text": "「そうだ！ ドングリと にんじん、とりかえっこ しよう！」",
+      "scene": "ポッケが両手いっぱいのドングリをミミに見せる。ミミが目を丸くする",
+      "sceneEn": "Pokke excitedly showing Mimi a pawful of shiny acorns, and Mimi looking at them with wide surprised eyes",
+      "characters": ["pokke", "mimi"],
+      "shot": "medium"
+    },
+    {
+      "text": "「ドングリ みっつと にんじん いっぽん。いいよ！」",
+      "scene": "ミミがドングリ3つを受け取り、ポッケににんじん1本を手わたす",
+      "sceneEn": "Mimi taking three acorns from Pokke and handing Pokke one big carrot in return, both smiling",
+      "characters": ["pokke", "mimi"],
+      "shot": "medium"
+    },
+    {
+      "text": "ぽりぽり かりかり。にんじんは あまくて おいしい！",
+      "scene": "ポッケがにんじんを両手で持って、うれしそうにかじっている",
+      "sceneEn": "Pokke happily munching on a big carrot held in both paws, eyes closed with delight",
+      "characters": ["pokke"],
+      "shot": "close"
+    },
+    {
+      "text": "ふと みると、ミミが ことりと なにか とりかえて います。",
+      "scene": "少しはなれた所で、ミミがさっきのドングリを小鳥にわたし、木の実をもらっている。ポッケがそれを見ている",
+      "sceneEn": "In the distance, Mimi is giving the acorns to a little songbird and receiving red berries in return, while Pokke watches with curiosity",
+      "characters": ["pokke", "mimi"],
+      "shot": "wide"
+    },
+    {
+      "text": "「あれれ？ ドングリって、なんにでも かわるの？」",
+      "scene": "ポッケが首をかしげ、頭の上にはてなが浮かんでいるような表情",
+      "sceneEn": "Pokke tilting the head in wonder, looking puzzled and curious",
+      "characters": ["pokke"],
+      "shot": "close"
+    },
+    {
+      "text": "モモばあに きいてみると 「どうしてだと おもう？」",
+      "scene": "大きな木の根元の家。モモばあがお茶を飲みながら、ポッケに問いかける",
+      "sceneEn": "A cozy home at the roots of a big tree. Momoba sips tea and gently asks Pokke a question, Pokke sitting beside her",
+      "characters": ["pokke", "momoba"],
+      "shot": "medium"
+    },
+    {
+      "text": "「ドングリは、もりの みんなが ほしいから…かな？」「そのとおり」",
+      "scene": "ポッケが一生けんめい答え、モモばあがうれしそうにうなずく",
+      "sceneEn": "Pokke answering earnestly while Momoba nods happily with a warm smile",
+      "characters": ["pokke", "momoba"],
+      "shot": "medium"
+    },
+    {
+      "text": "ポッケは ドングリを ほっぺに ためて、つぎは なにと かえようかな。",
+      "scene": "夕焼けの森。ほっぺをふくらませたポッケが、楽しそうに森の小道を歩いていく",
+      "sceneEn": "The forest at sunset. Pokke, cheeks full of acorns, walks happily along a forest path, looking forward to tomorrow",
+      "characters": ["pokke"],
+      "shot": "wide"
+    }
+  ],
+  "parents": {
+    "heading": "お金は「とりかえっこ」の道具",
+    "body": [
+      "昔の人は、ほしい物があると、自分の持ち物と直接とりかえていました（物々交換）。でも、相手が自分の持ち物をほしがらないと、交換は成り立ちません。",
+      "そこで生まれたのがお金です。みんなが価値を認めるものがあれば、いつでも、だれとでも、ほしい物ととりかえられます。この絵本では、森のみんなが大切にするドングリが、お金の役割をしています。",
+      "お金そのものは食べたり遊んだりできませんが、ほしい物やサービスにかえられます。それがお金のいちばんの役割です。シリーズでは、このあと「えらぶ」「ためる」、そして「そだてる」へと進んでいきます。"
+    ],
+    "questions": [
+      "ポッケは、ドングリと なにを とりかえたかな？",
+      "ミミは、もらった ドングリを どうしたかな？",
+      "ドングリが あったら、なにと とりかえたい？"
+    ]
+  }
+}
