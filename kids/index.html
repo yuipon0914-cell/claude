@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ピコラボ</title>
+  <meta name="description" content="ロボットのピコと いっしょに、プログラミング と AI の しくみを あそびながら まなぶ、こども向けの 学習アプリ">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='25' font-size='24' text-anchor='middle'%3E🤖%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/kids.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#/"><span aria-hidden="true">🤖</span> ピコラボ</a>
+    <span id="stickers" class="stickers" aria-label="あつめた シール"></span>
+  </header>
+  <main id="app" class="wrap"><noscript>このアプリを つかうには JavaScript を ゆうこうに してください。</noscript></main>
+
+  <!-- しくみ（判定） -->
+  <script src="js/engine/robot.js"></script>
+  <script src="js/engine/ai.js"></script>
+  <script src="js/engine/progress.js"></script>
+  <!-- データ -->
+  <script src="js/data/levels.js"></script>
+  <script src="js/data/ai.js"></script>
+  <!-- 画面 -->
+  <script src="js/app.js"></script>
+</body>
+</html>

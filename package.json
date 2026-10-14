@@ -6,6 +6,9 @@
   "scripts": {
     "start": "npx http-server . -c-1",
     "test": "node tests/run-tests.js",
-    "test:e2e": "node tests/e2e.js"
+    "test:e2e": "node tests/e2e.js",
+    "start:kids": "npx http-server kids -c-1",
+    "test:kids": "node kids/tests/run-tests.js",
+    "test:kids:e2e": "node kids/tests/e2e.js"
   }
 }
