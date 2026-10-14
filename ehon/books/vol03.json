@@ -6,8 +6,8 @@
   "coverSceneEn": "Pokke and Dosshiri the bear looking together into a clay jar half full of acorns, in a sunny early summer forest",
   "spreads": [
     { "text": "もうすぐ もりの なつまつり。", "scene": "初夏の森。木と木の間にちょうちんが飾られ始めている", "sceneEn": "An early summer forest. Paper lanterns are being strung between the trees for an upcoming festival", "characters": ["pokke"], "shot": "wide" },
-    { "text": "「はちみつケーキの おみせが でるんだって！」", "scene": "ポッケがおまつりのお知らせの絵を見て、よだれをたらしそうになる", "sceneEn": "Pokke looking at a festival poster with a picture of a honey cake, mouth watering", "characters": ["pokke"], "shot": "medium" },
-    { "text": "でも ケーキは、ドングリ とお。", "scene": "ケーキ屋台の看板に、ドングリが10個描かれている", "sceneEn": "A festival stall sign showing a honey cake with ten acorns painted next to it", "characters": ["pokke"], "shot": "close" },
+    { "text": "「はちみつケーキの おみせが でるんだって！」", "scene": "ポッケがおまつりのお知らせの絵を見て、よだれをたらしそうになる", "sceneEn": "Pokke imagining a big golden honey cake in a dreamy thought bubble, mouth watering", "characters": ["pokke"], "shot": "medium" },
+    { "text": "でも ケーキは、ドングリ とお。", "scene": "ケーキ屋台の看板に、ドングリが10個描かれている", "sceneEn": "A festival stall displaying a honey cake, with exactly ten acorns lined up beside it on a plain wooden board", "characters": ["pokke"], "shot": "close" },
     { "text": "ポッケの ドングリは ふたつだけ。いつも すぐ たべちゃうから。", "scene": "ポッケが手のひらの2つのドングリを見て、しょんぼりする", "sceneEn": "Pokke looking down sadly at just two acorns in an open paw", "characters": ["pokke"], "shot": "close" },
     { "text": "クマの どっしりは、まいにち ドングリを つぼに いれています。", "scene": "どっしりが大きな体で、つぼにドングリを1つそっと入れている", "sceneEn": "Dosshiri the big bear carefully dropping one acorn into a clay jar", "characters": ["dosshiri", "pokke"], "shot": "medium" },
     { "text": "「どうして たべないの？」「まつと、いいことが あるからさ」", "scene": "ポッケが不思議そうに聞き、どっしりがにっこり笑う", "sceneEn": "Pokke asking curiously, and Dosshiri answering with a slow warm smile", "characters": ["pokke", "dosshiri"], "shot": "medium" },

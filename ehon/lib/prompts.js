@@ -31,7 +31,7 @@ function buildCoverPrompt(ms, characters, style) {
 function renderPromptsMarkdown(ms, characters, style) {
   const out = [`# 第${ms.volume}巻「${ms.title}」 画像プロンプト`, "",
     "各見開きの絵は 2:1 の横長で作り、`images/s01.png` 〜 `s13.png` に保存します。表紙は 1:1 で `images/cover.png` です。",
-    "印刷には 5175×2625px（表紙は 2550×2550px）以上が目安です。足りなければツールのアップスケール機能を使ってください。", ""];
+    "印刷には 5250×2625px（表紙は 2625×2625px）以上が目安です。足りなければツールのアップスケール機能を使ってください。", ""];
   const checks = (list) => list.map((m) => `- [ ] ${m}`).join("\n");
   ms.spreads.forEach((s, i) => {
     out.push(`## 見開き${i + 1}（images/s${String(i + 1).padStart(2, "0")}.png）`, "",

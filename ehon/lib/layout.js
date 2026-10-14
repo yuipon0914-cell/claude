@@ -4,10 +4,9 @@
  * 左開きなので、奇数ページが右、偶数ページが左。見開きの絵は p2–3, p4–5 … p26–27 の13組。
  */
 "use strict";
-const fs = require("fs");
-const path = require("path");
 const { pathToFileURL } = require("url");
 const kdp = require("./kdp");
+const { findImage } = require("./images");
 const series = require("../data/series.json");
 
 const DISCLAIMER = "この本は、お金の考え方を親子で話すきっかけとして作ったものです。特定の金融商品をすすめるものではありません。";
@@ -15,14 +14,6 @@ const AI_NOTE = "イラストは画像生成AIで作成しています。";
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const pad2 = (n) => String(n).padStart(2, "0");
-
-function findImage(dir, name) {
-  for (const ext of [".png", ".jpg", ".jpeg"]) {
-    const f = path.join(dir, name + ext);
-    if (fs.existsSync(f)) return f;
-  }
-  return null;
-}
 
 function css({ fontPath, pageW, pageH }) {
   return `
@@ -173,6 +164,7 @@ function renderCover(ms, opts) {
   const panel = kdp.TRIM + kdp.BLEED; // 裏表紙・表表紙それぞれの幅（外側の裁ち落としを含む）
   const frontX = width - panel;
   const inset = kdp.BLEED + kdp.SAFE;
+  // 背は32ページだと 0.075in しかなく、製本で ±0.0625in ずれるので、裏表紙と同じ色にして別の色の帯は置かない
   // 裏表紙の右下 2in×1.2in は KDP がバーコードを置くので空けておく
   const back = `<div class="small" style="position:absolute;left:${inset}in;top:${inset}in;width:${kdp.TRIM - kdp.SAFE * 2}in;height:5in;">
     <p class="series">${esc(series.seriesTitle)}</p>
@@ -180,9 +172,8 @@ function renderCover(ms, opts) {
     <p>この本で学ぶこと：${esc(ms.learning)}</p>
   </div>`;
   const body = `<section class="page" style="width:${width}in;height:${height}in" data-cover="1">
-    <div style="position:absolute;left:0;top:0;width:${panel}in;height:100%;background:#f3e6cc"></div>
+    <div style="position:absolute;left:0;top:0;width:${width - panel}in;height:100%;background:#f3e6cc"></div>
     ${back}
-    <div style="position:absolute;left:${panel}in;top:0;width:${width - panel * 2}in;height:100%;background:#b5532a"></div>
     ${frontCover(ms, opts.imagesDir, { x: frontX, w: panel, h: height, inset })}
   </section>`;
   return doc(ms.title, css({ fontPath: opts.fontPath, pageW: width, pageH: height }), body);

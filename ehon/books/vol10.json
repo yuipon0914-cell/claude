@@ -5,19 +5,135 @@
   "learning": "「すぐに・必ず・たくさん増える」話は疑う（シリーズのまとめ）",
   "coverSceneEn": "Kon the fox with a big grin holding up a single acorn and gesturing grandly, while Pokke looks back at Kon with a thoughtful, doubtful face",
   "spreads": [
-    { "text": "ある ひ、キツネの コンが やってきました。", "scene": "森の広場に、むらさきのベストのコンがさっそうと現れる", "sceneEn": "Kon the fox in a shiny purple vest strutting into a forest clearing with a flashy smile", "characters": ["kon"], "shot": "wide" },
-    { "text": "「ドングリ ひとつで、あしたには ひゃっこに して かえすよ」", "scene": "コンがドングリを1つ高くかかげ、大げさに話す", "sceneEn": "Kon holding up a single acorn high and talking grandly, with sparkles drawn around the words", "characters": ["kon"], "shot": "medium" },
-    { "text": "「ほんとう？」 もりの みんなは おおさわぎ。", "scene": "森の動物たちが集まってきて、目をかがやかせる", "sceneEn": "Many small forest animals crowding around Kon excitedly, eyes shining, Pokke among them", "characters": ["pokke", "kon"], "shot": "wide" },
-    { "text": "「いまだけ だよ。はやく はやく！」", "scene": "コンがせかし、動物たちがドングリを差し出し始める", "sceneEn": "Kon hurrying everyone along, and the animals starting to hand over their acorns", "characters": ["kon"], "shot": "medium" },
-    { "text": "ポッケは おもいだしました。きが そだつには、なんねんも かかった。", "scene": "ポッケの思い出。小さな芽が何年もかけて木になった（第5巻）", "sceneEn": "Pokke remembering, shown as a soft memory bubble: a tiny sprout slowly growing into a tree over many seasons", "characters": ["pokke"], "shot": "medium" },
-    { "text": "ふえるのは すこしずつ。あめの としだって あった。", "scene": "思い出の続き。林が少しずつ増え、雨の年もあった（第6・8巻）", "sceneEn": "More memories in soft bubbles: a woodland growing little by little, and a rainy year with few acorns", "characters": ["pokke"], "shot": "medium" },
-    { "text": "「コン、どうやって ひゃっこに するの？」", "scene": "ポッケが一歩前に出て、コンにまっすぐ聞く", "sceneEn": "Pokke stepping forward and asking Kon a direct question with a calm, serious face", "characters": ["pokke", "kon"], "shot": "medium" },
-    { "text": "「それは… ひみつ！」 コンは めを そらしました。", "scene": "コンが目をそらし、しっぽをそわそわさせる", "sceneEn": "Kon looking away nervously, tail swishing, avoiding the question", "characters": ["kon"], "shot": "close" },
-    { "text": "モモばあ「ポッケは、どう おもう？」", "scene": "モモばあがポッケのそばに来て問いかける", "sceneEn": "Momoba coming to stand beside Pokke and quietly asking what Pokke thinks", "characters": ["pokke", "momoba"], "shot": "medium" },
-    { "text": "「はやすぎるし、おおすぎる。ひみつなのも へんだよ」", "scene": "ポッケがドングリを胸にかかえ、きっぱり言う", "sceneEn": "Pokke hugging the acorns close and speaking firmly and confidently", "characters": ["pokke", "momoba"], "shot": "close" },
-    { "text": "つぎの ひ、コンは みんなの ドングリと いっしょに きえていました。", "scene": "翌朝の広場。コンはいなくなり、動物たちががっかりしている", "sceneEn": "The next morning in the clearing. Kon is gone, and the forest animals look sad and disappointed, drawn gently", "characters": ["pokke"], "shot": "wide" },
-    { "text": "「ぼくの もりで、いっしょに うえよう」", "scene": "ポッケが自分の林を指さし、みんなを誘う", "sceneEn": "Pokke kindly pointing toward its oak woodland and inviting all the sad animals to come", "characters": ["pokke", "momoba"], "shot": "medium" },
-    { "text": "みんなで うえた ドングリが、いつか おおきな もりに なりますように。", "scene": "夕日の中、森のみんなでドングリを植える。これまでのゲストたちの姿も遠くに", "sceneEn": "At sunset, all the forest animals planting acorns together in a wide meadow, a hopeful and warm final scene", "characters": ["pokke", "momoba"], "shot": "wide" }
+    {
+      "text": "ある ひ、キツネの コンが やってきました。",
+      "scene": "森の広場に、むらさきのベストのコンがさっそうと現れる",
+      "sceneEn": "Kon the fox in a shiny purple vest strutting into a forest clearing with a flashy smile",
+      "characters": [
+        "kon"
+      ],
+      "shot": "wide"
+    },
+    {
+      "text": "「ドングリ ひとつで、あしたには ひゃっこに して かえすよ」",
+      "scene": "コンがドングリを1つ高くかかげ、大げさに話す",
+      "sceneEn": "Kon holding up a single acorn high and talking grandly, with magical sparkles around the acorn",
+      "characters": [
+        "kon"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "「ほんとう？」 もりの みんなは おおさわぎ。",
+      "scene": "森の動物たちが集まってきて、目をかがやかせる",
+      "sceneEn": "Many small forest animals crowding around Kon excitedly, eyes shining, Pokke among them",
+      "characters": [
+        "pokke",
+        "kon"
+      ],
+      "shot": "wide"
+    },
+    {
+      "text": "「いまだけ だよ。はやく はやく！」",
+      "scene": "コンがせかし、動物たちがドングリを差し出し始める",
+      "sceneEn": "Kon hurrying everyone along, and the animals starting to hand over their acorns",
+      "characters": [
+        "kon"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "ポッケは おもいだしました。きが そだつには、なんねんも かかった。",
+      "scene": "ポッケの思い出。小さな芽が何年もかけて木になった（第5巻）",
+      "sceneEn": "Pokke remembering, shown as a soft memory bubble: a tiny sprout slowly growing into a tree over many seasons",
+      "characters": [
+        "pokke"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "ふえるのは すこしずつ。あめの としだって あった。",
+      "scene": "思い出の続き。林が少しずつ増え、雨の年もあった（第6・8巻）",
+      "sceneEn": "More memories in soft bubbles: a woodland growing little by little, and a rainy year with few acorns",
+      "characters": [
+        "pokke"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "「コン、どうやって ひゃっこに するの？」",
+      "scene": "ポッケが一歩前に出て、コンにまっすぐ聞く",
+      "sceneEn": "Pokke stepping forward and asking Kon a direct question with a calm, serious face",
+      "characters": [
+        "pokke",
+        "kon"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "「それは… ひみつ！」 コンは めを そらしました。",
+      "scene": "コンが目をそらし、しっぽをそわそわさせる",
+      "sceneEn": "Kon looking away nervously, tail swishing, avoiding the question",
+      "characters": [
+        "kon"
+      ],
+      "shot": "close"
+    },
+    {
+      "text": "モモばあ「ポッケは、どう おもう？」",
+      "scene": "モモばあがポッケのそばに来て問いかける",
+      "sceneEn": "Momoba coming to stand beside Pokke and quietly asking what Pokke thinks",
+      "characters": [
+        "pokke",
+        "momoba"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "「はやすぎるし、おおすぎる。ひみつなのも へんだよ」",
+      "scene": "ポッケがドングリを胸にかかえ、きっぱり言う",
+      "sceneEn": "Pokke hugging the acorns close and speaking firmly and confidently",
+      "characters": [
+        "pokke",
+        "momoba"
+      ],
+      "shot": "close"
+    },
+    {
+      "text": "つぎの ひ、コンは みんなの ドングリと いっしょに きえていました。",
+      "scene": "翌朝の広場。コンはいなくなり、動物たちががっかりしている",
+      "sceneEn": "The next morning in the clearing. Kon is gone, and the forest animals look sad and disappointed, drawn gently",
+      "characters": [
+        "pokke"
+      ],
+      "shot": "wide"
+    },
+    {
+      "text": "「ぼくの もりで、いっしょに うえよう」",
+      "scene": "ポッケが自分の林を指さし、みんなを誘う",
+      "sceneEn": "Pokke kindly pointing toward its oak woodland and inviting the sad forest friends, Mimi, Chuchi and Dosshiri, to come along",
+      "characters": [
+        "pokke",
+        "momoba",
+        "mimi",
+        "chuchi",
+        "dosshiri"
+      ],
+      "shot": "medium"
+    },
+    {
+      "text": "みんなで うえた ドングリが、いつか おおきな もりに なりますように。",
+      "scene": "夕日の中、森のみんなでドングリを植える。これまでのゲストたちの姿も遠くに",
+      "sceneEn": "At sunset, Pokke, Momoba, Mimi, Chuchi and Dosshiri planting acorns together in a wide meadow, a hopeful and warm final scene",
+      "characters": [
+        "pokke",
+        "momoba",
+        "mimi",
+        "chuchi",
+        "dosshiri"
+      ],
+      "shot": "wide"
+    }
   ],
   "parents": {
     "heading": "うますぎる話を見分ける",

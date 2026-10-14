@@ -1,7 +1,7 @@
 # 第3巻「まってみようかな」 画像プロンプト
 
 各見開きの絵は 2:1 の横長で作り、`images/s01.png` 〜 `s13.png` に保存します。表紙は 1:1 で `images/cover.png` です。
-印刷には 5175×2625px（表紙は 2550×2550px）以上が目安です。足りなければツールのアップスケール機能を使ってください。
+印刷には 5250×2625px（表紙は 2625×2625px）以上が目安です。足りなければツールのアップスケール機能を使ってください。
 
 ## 見開き1（images/s01.png）
 
@@ -28,7 +28,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 場面：ポッケがおまつりのお知らせの絵を見て、よだれをたらしそうになる
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Pokke looking at a festival poster with a picture of a honey cake, mouth watering. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Pokke imagining a big golden honey cake in a dreamy thought bubble, mouth watering. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 緑のマフラーを巻いている
@@ -46,7 +46,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 場面：ケーキ屋台の看板に、ドングリが10個描かれている
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. A festival stall sign showing a honey cake with ten acorns painted next to it. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. close-up on the characters' faces and expressions. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. A festival stall displaying a honey cake, with exactly ten acorns lined up beside it on a plain wooden board. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. close-up on the characters' faces and expressions. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 緑のマフラーを巻いている

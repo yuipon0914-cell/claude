@@ -31,7 +31,7 @@ NODE_PATH=$(npm root -g) npm run build -- 1  # 第1巻の入稿ファイルを d
 
 | 絵 | ファイル名 | 比率 | 目標の大きさ |
 |---|---|---|---|
-| 見開き1〜13 | `books/volNN/images/s01.png` 〜 `s13.png` | 2:1 | 5175×2625px 以上 |
+| 見開き1〜13 | `books/volNN/images/s01.png` 〜 `s13.png` | 2:1 | 5250×2625px 以上 |
 | 表紙 | `books/volNN/images/cover.png` | 1:1 | 2625×2625px 以上 |
 
 - AIの出力はたいてい印刷には小さいので、ツールのアップスケール機能で大きくしてください。足りないと書き出し時に「300dpi 未満」と警告が出ます

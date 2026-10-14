@@ -1,7 +1,7 @@
 # 第7巻「みんなの ジュースやさん」 画像プロンプト
 
 各見開きの絵は 2:1 の横長で作り、`images/s01.png` 〜 `s13.png` に保存します。表紙は 1:1 で `images/cover.png` です。
-印刷には 5175×2625px（表紙は 2550×2550px）以上が目安です。足りなければツールのアップスケール機能を使ってください。
+印刷には 5250×2625px（表紙は 2625×2625px）以上が目安です。足りなければツールのアップスケール機能を使ってください。
 
 ## 見開き1（images/s01.png）
 
@@ -111,7 +111,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 場面：ダンさんがポッケに、印のついた葉っぱのカードを渡す
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Dan handing Pokke a special leaf card with a little juice-cup stamp, a sign of being a partner. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Dan, a sturdy friendly badger shopkeeper with a black-and-white striped face, wearing a white apron and a small orange bandana. close-up on the characters' faces and expressions. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Dan handing Pokke a special leaf card with a little juice-cup stamp on it, a token of being a partner. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Dan, a sturdy friendly badger shopkeeper with a black-and-white striped face, wearing a white apron and a small orange bandana. close-up on the characters' faces and expressions. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 緑のマフラーを巻いている

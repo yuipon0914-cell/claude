@@ -1,7 +1,7 @@
 # 第10巻「うますぎる はなし」 画像プロンプト
 
 各見開きの絵は 2:1 の横長で作り、`images/s01.png` 〜 `s13.png` に保存します。表紙は 1:1 で `images/cover.png` です。
-印刷には 5175×2625px（表紙は 2550×2550px）以上が目安です。足りなければツールのアップスケール機能を使ってください。
+印刷には 5250×2625px（表紙は 2625×2625px）以上が目安です。足りなければツールのアップスケール機能を使ってください。
 
 ## 見開き1（images/s01.png）
 
@@ -27,7 +27,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 場面：コンがドングリを1つ高くかかげ、大げさに話す
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Kon holding up a single acorn high and talking grandly, with sparkles drawn around the words. Kon, a slim red fox with a fluffy white-tipped tail, narrow sly eyes and a wide grin, wearing a shiny purple vest, drawn in a cartoonish not-scary way. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Kon holding up a single acorn high and talking grandly, with magical sparkles around the acorn. Kon, a slim red fox with a fluffy white-tipped tail, narrow sly eyes and a wide grin, wearing a shiny purple vest, drawn in a cartoonish not-scary way. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 赤いキツネ
@@ -216,7 +216,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 場面：ポッケが自分の林を指さし、みんなを誘う
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Pokke kindly pointing toward its oak woodland and inviting all the sad animals to come. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Momoba, a gentle elderly grandmother squirrel with soft grey-brown fur streaked with silver, small round wire-rimmed glasses, a red apron, a slightly bent posture, a kind smile, a fluffy grey-tinged tail. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. Pokke kindly pointing toward its oak woodland and inviting the sad forest friends, Mimi, Chuchi and Dosshiri, to come along. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Momoba, a gentle elderly grandmother squirrel with soft grey-brown fur streaked with silver, small round wire-rimmed glasses, a red apron, a slightly bent posture, a kind smile, a fluffy grey-tinged tail. Mimi, a small white rabbit with long upright ears with pink insides, a yellow ribbon tied on one ear, a pink nose. Chuchi, a tiny grey field mouse with big round ears, a long thin tail, wearing a small yellow backpack. Dosshiri, a big calm brown bear with a round belly and sleepy gentle eyes, wearing a blue knitted cap. medium shot, characters shown from head to toe. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 緑のマフラーを巻いている
@@ -226,6 +226,12 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 - [ ] 丸いめがね
 - [ ] 赤いエプロン
 - [ ] 銀色まじりの灰茶色の毛
+- [ ] 白い毛
+- [ ] 片耳に黄色いリボン
+- [ ] 灰色の小さなネズミ
+- [ ] 黄色いリュック
+- [ ] 大きな茶色のクマ
+- [ ] 青いニット帽
 - [ ] 文字やロゴが描かれていない
 - [ ] 中央（のど）に顔がかかっていない
 - [ ] 上の1/3に文字を置ける静かな余白がある
@@ -237,7 +243,7 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 場面：夕日の中、森のみんなでドングリを植える。これまでのゲストたちの姿も遠くに
 
 ```
-soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. At sunset, all the forest animals planting acorns together in a wide meadow, a hopeful and warm final scene. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Momoba, a gentle elderly grandmother squirrel with soft grey-brown fur streaked with silver, small round wire-rimmed glasses, a red apron, a slightly bent posture, a kind smile, a fluffy grey-tinged tail. wide shot, characters small in a broad forest landscape. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
+soft watercolor children's picture book illustration for ages 3 to 5, gentle pencil outlines, warm autumn forest palette of ochre, rust, moss green and cream, soft diffused light, rounded friendly shapes, simple uncluttered background, visible paper texture. At sunset, Pokke, Momoba, Mimi, Chuchi and Dosshiri planting acorns together in a wide meadow, a hopeful and warm final scene. Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf. Momoba, a gentle elderly grandmother squirrel with soft grey-brown fur streaked with silver, small round wire-rimmed glasses, a red apron, a slightly bent posture, a kind smile, a fluffy grey-tinged tail. Mimi, a small white rabbit with long upright ears with pink insides, a yellow ribbon tied on one ear, a pink nose. Chuchi, a tiny grey field mouse with big round ears, a long thin tail, wearing a small yellow backpack. Dosshiri, a big calm brown bear with a round belly and sleepy gentle eyes, wearing a blue knitted cap. wide shot, characters small in a broad forest landscape. wide 2:1 landscape composition, keep the center vertical strip free of faces, the top third is calm sky or foliage with empty space for text. no text, no letters, no words, no logos, no signature, no watermark, no humans, not photorealistic, no scary expressions, no sharp teeth, no weapons.
 ```
 
 - [ ] 緑のマフラーを巻いている
@@ -247,6 +253,12 @@ soft watercolor children's picture book illustration for ages 3 to 5, gentle pen
 - [ ] 丸いめがね
 - [ ] 赤いエプロン
 - [ ] 銀色まじりの灰茶色の毛
+- [ ] 白い毛
+- [ ] 片耳に黄色いリボン
+- [ ] 灰色の小さなネズミ
+- [ ] 黄色いリュック
+- [ ] 大きな茶色のクマ
+- [ ] 青いニット帽
 - [ ] 文字やロゴが描かれていない
 - [ ] 中央（のど）に顔がかかっていない
 - [ ] 上の1/3に文字を置ける静かな余白がある
