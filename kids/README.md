@@ -9,6 +9,8 @@
 - `kids/index.html` をブラウザで直接開く、または
 - `npx http-server kids` → 表示された URL を開く
 
+公開版：https://claude.ai/artifact/XWpwM1Xhfr8URiV4d1jbuT （`node kids/scripts/build-artifact.js` で `dist/picolab.html` を生成して公開）
+
 進捗はブラウザの `localStorage`（キー `picolab.progress`）にだけ保存されます。
 
 ## 内容
