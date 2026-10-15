@@ -1,62 +1,151 @@
 [
   {
-    "id": "pokke", "name": "ポッケ", "species": "子リス", "role": "主人公",
+    "id": "pokke",
+    "name": "ポッケ",
+    "species": "子リス",
+    "role": "主人公",
     "look": "Pokke, a small young squirrel child with bright warm-brown fur, a cream-colored belly, big round shiny black eyes, round puffy cheeks, small tufted ears, a very large fluffy curled tail, wearing a knitted green scarf",
-    "marks": ["緑のマフラーを巻いている", "明るい茶色の毛とクリーム色のおなか", "大きなふわふわのしっぽ", "ほっぺがまるくふくらんでいる"]
+    "marks": [
+      "緑のマフラーを巻いている",
+      "明るい茶色の毛とクリーム色のおなか",
+      "大きなふわふわのしっぽ",
+      "ほっぺがまるくふくらんでいる"
+    ],
+    "canvaRef": "MAHYDdXCjek"
   },
   {
-    "id": "momoba", "name": "モモばあ", "species": "おばあちゃんリス", "role": "問いかける役",
+    "id": "momoba",
+    "name": "モモばあ",
+    "species": "おばあちゃんリス",
+    "role": "問いかける役",
     "look": "Momoba, a gentle elderly grandmother squirrel with soft grey-brown fur streaked with silver, small round wire-rimmed glasses, a red apron, a slightly bent posture, a kind smile, a fluffy grey-tinged tail",
-    "marks": ["丸いめがね", "赤いエプロン", "銀色まじりの灰茶色の毛"]
+    "marks": [
+      "丸いめがね",
+      "赤いエプロン",
+      "銀色まじりの灰茶色の毛"
+    ],
+    "canvaRef": "MAHYDZ5KAZU"
   },
   {
-    "id": "mimi", "name": "ミミ", "species": "ウサギ", "role": "第1巻のゲスト",
+    "id": "mimi",
+    "name": "ミミ",
+    "species": "ウサギ",
+    "role": "第1巻のゲスト",
     "look": "Mimi, a small white rabbit with long upright ears with pink insides, a yellow ribbon tied on one ear, a pink nose",
-    "marks": ["白い毛", "片耳に黄色いリボン"]
+    "marks": [
+      "白い毛",
+      "片耳に黄色いリボン"
+    ],
+    "canvaRef": "MAHYDT9tEsE"
   },
   {
-    "id": "kira", "name": "キラ", "species": "カラス", "role": "第2巻のゲスト",
+    "id": "kira",
+    "name": "キラ",
+    "species": "カラス",
+    "role": "第2巻のゲスト",
     "look": "Kira, a friendly young crow with glossy black feathers with a blue-green sheen, bright curious eyes, carrying a small wooden tray of colorful shiny glass marbles",
-    "marks": ["つやのある黒い羽", "ビー玉をのせた木のおぼん"]
+    "marks": [
+      "つやのある黒い羽",
+      "ビー玉をのせた木のおぼん"
+    ],
+    "canvaRef": "MAHYDhApsYU"
   },
   {
-    "id": "dosshiri", "name": "どっしり", "species": "クマ", "role": "第3巻のゲスト",
+    "id": "dosshiri",
+    "name": "どっしり",
+    "species": "クマ",
+    "role": "第3巻のゲスト",
     "look": "Dosshiri, a big calm brown bear with a round belly and sleepy gentle eyes, wearing a blue knitted cap",
-    "marks": ["大きな茶色のクマ", "青いニット帽"]
+    "marks": [
+      "大きな茶色のクマ",
+      "青いニット帽"
+    ],
+    "canvaRef": "MAHYDh811U8"
   },
   {
-    "id": "chuchi", "name": "チュチ", "species": "ネズミ", "role": "第4巻のゲスト",
+    "id": "chuchi",
+    "name": "チュチ",
+    "species": "ネズミ",
+    "role": "第4巻のゲスト",
     "look": "Chuchi, a tiny grey field mouse with big round ears, a long thin tail, wearing a small yellow backpack",
-    "marks": ["灰色の小さなネズミ", "黄色いリュック"]
+    "marks": [
+      "灰色の小さなネズミ",
+      "黄色いリュック"
+    ],
+    "canvaRef": "MAHYDm-Mtgw"
   },
   {
-    "id": "tsuchio", "name": "ツチオ", "species": "ミミズ", "role": "第5巻のゲスト",
+    "id": "tsuchio",
+    "name": "ツチオ",
+    "species": "ミミズ",
+    "role": "第5巻のゲスト",
     "look": "Tsuchio, a cute pink earthworm with a friendly smiling face and a tiny straw hat",
-    "marks": ["ピンクのミミズ", "小さな麦わら帽子"]
+    "marks": [
+      "ピンクのミミズ",
+      "小さな麦わら帽子"
+    ],
+    "canvaRef": "MAHYDtZ-bhw"
   },
   {
-    "id": "bunta", "name": "ブンタ", "species": "ミツバチ", "role": "第6巻のゲスト",
+    "id": "bunta",
+    "name": "ブンタ",
+    "species": "ミツバチ",
+    "role": "第6巻のゲスト",
     "look": "Bunta, a round fuzzy honeybee with yellow and black stripes, small clear wings, wearing tiny round blue glasses",
-    "marks": ["黄色と黒のしま", "青い丸めがね"]
+    "marks": [
+      "黄色と黒のしま",
+      "青い丸めがね"
+    ],
+    "canvaRef": "MAHYDkD17rg"
   },
   {
-    "id": "dan", "name": "ダンさん", "species": "アナグマ", "role": "第7巻のゲスト",
+    "id": "dan",
+    "name": "ダンさん",
+    "species": "アナグマ",
+    "role": "第7巻のゲスト",
     "look": "Dan, a sturdy friendly badger shopkeeper with a black-and-white striped face, wearing a white apron and a small orange bandana",
-    "marks": ["白黒しまの顔", "白いエプロン", "オレンジのバンダナ"]
+    "marks": [
+      "白黒しまの顔",
+      "白いエプロン",
+      "オレンジのバンダナ"
+    ],
+    "canvaRef": "MAHYDp1KLKI"
   },
   {
-    "id": "pichon", "name": "ピチョン", "species": "カエル", "role": "第8巻のゲスト",
+    "id": "pichon",
+    "name": "ピチョン",
+    "species": "カエル",
+    "role": "第8巻のゲスト",
     "look": "Pichon, a small bright green tree frog with big round eyes, holding a large yellow leaf as an umbrella",
-    "marks": ["明るい緑のカエル", "黄色い葉っぱのかさ"]
+    "marks": [
+      "明るい緑のカエル",
+      "黄色い葉っぱのかさ"
+    ],
+    "canvaRef": "MAHYDnxhuG4"
   },
   {
-    "id": "jay", "name": "ジェイ", "species": "カケス", "role": "第9巻のゲスト",
+    "id": "jay",
+    "name": "ジェイ",
+    "species": "カケス",
+    "role": "第9巻のゲスト",
     "look": "Jay, a Eurasian jay bird with a pinkish-brown body, bright blue striped wing patches, a black mustache stripe, a small crest",
-    "marks": ["ピンクがかった茶色の体", "つばさの青いしま"]
+    "marks": [
+      "ピンクがかった茶色の体",
+      "つばさの青いしま"
+    ],
+    "canvaRef": "MAHYDgkCK84"
   },
   {
-    "id": "kon", "name": "コン", "species": "キツネ", "role": "第10巻のゲスト",
+    "id": "kon",
+    "name": "コン",
+    "species": "キツネ",
+    "role": "第10巻のゲスト",
     "look": "Kon, a slim red fox with a fluffy white-tipped tail, narrow sly eyes and a wide grin, wearing a shiny purple vest, drawn in a cartoonish not-scary way",
-    "marks": ["赤いキツネ", "むらさきのベスト", "こわすぎない表情"]
+    "marks": [
+      "赤いキツネ",
+      "むらさきのベスト",
+      "こわすぎない表情"
+    ],
+    "canvaRef": "MAHYDhPWGsQ"
   }
 ]
