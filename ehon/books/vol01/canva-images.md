@@ -1,6 +1,6 @@
-# 第1巻 Canva で作った絵
+# 第1巻「ポッケと こうかんこ」 Canva で作った絵
 
-2026-10-15 に Canva の画像生成で作成しました。キャラクターの基準の絵を参考画像として渡して、見た目をそろえています。
+キャラクターの基準の絵を参考画像として渡して、見た目をそろえています。
 
 ## 保存のしかた
 
@@ -27,10 +27,19 @@
 | `s13.png` | 見開き13 | [MAHYDVZ7xQM](https://www.canva.com/M/MAHYDVZ7xQM) |
 | `cover.png` | 表紙 | [MAHYDSM3HS8](https://www.canva.com/M/MAHYDSM3HS8) |
 
-## キャラクターの基準の絵（2巻以降も参考画像として使う）
+## キャラクターの基準の絵（作り直すときに参考画像として使う）
 
 | キャラクター | Canva の画像 |
 |---|---|
 | ポッケ | [MAHYDdXCjek](https://www.canva.com/M/MAHYDdXCjek) |
-| ミミ | [MAHYDT9tEsE](https://www.canva.com/M/MAHYDT9tEsE) |
 | モモばあ | [MAHYDZ5KAZU](https://www.canva.com/M/MAHYDZ5KAZU) |
+| ミミ | [MAHYDT9tEsE](https://www.canva.com/M/MAHYDT9tEsE) |
+| キラ | [MAHYDhApsYU](https://www.canva.com/M/MAHYDhApsYU) |
+| どっしり | [MAHYDh811U8](https://www.canva.com/M/MAHYDh811U8) |
+| チュチ | [MAHYDm-Mtgw](https://www.canva.com/M/MAHYDm-Mtgw) |
+| ツチオ | [MAHYDtZ-bhw](https://www.canva.com/M/MAHYDtZ-bhw) |
+| ブンタ | [MAHYDkD17rg](https://www.canva.com/M/MAHYDkD17rg) |
+| ダンさん | [MAHYDp1KLKI](https://www.canva.com/M/MAHYDp1KLKI) |
+| ピチョン | [MAHYDnxhuG4](https://www.canva.com/M/MAHYDnxhuG4) |
+| ジェイ | [MAHYDgkCK84](https://www.canva.com/M/MAHYDgkCK84) |
+| コン | [MAHYDhPWGsQ](https://www.canva.com/M/MAHYDhPWGsQ) |
