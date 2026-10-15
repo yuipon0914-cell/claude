@@ -17,7 +17,7 @@
 | `s03.png` | 見開き3 | [MAHYDwSTzc4](https://www.canva.com/M/MAHYDwSTzc4) |
 | `s04.png` | 見開き4 | [MAHYD2cEkLA](https://www.canva.com/M/MAHYD2cEkLA) |
 | `s05.png` | 見開き5 | [MAHYD7QCzvU](https://www.canva.com/M/MAHYD7QCzvU) |
-| `s06.png` | 見開き6 | （まだ作っていません。prompts.md のプロンプトで作ってください） |
+| `s06.png` | 見開き6 | [MAHYEDFfAsU](https://www.canva.com/M/MAHYEDFfAsU) |
 | `s07.png` | 見開き7 | （まだ作っていません。prompts.md のプロンプトで作ってください） |
 | `s08.png` | 見開き8 | （まだ作っていません。prompts.md のプロンプトで作ってください） |
 | `s09.png` | 見開き9 | （まだ作っていません。prompts.md のプロンプトで作ってください） |
